@@ -1,0 +1,150 @@
+.logos-more {
+  padding: 14rem 0;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+    .section-inner__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+
+  &__title {
+    max-width: 103.5rem;
+    margin-bottom: 4rem;
+    font: var(--font-heading-3);
+
+    @include mq(md) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__desc {
+    max-width: 83.6rem;
+    margin-bottom: 3rem;
+    opacity: 0.6;
+
+    p {
+      margin-bottom: 2.4rem;
+
+      @include mq(sm) {
+        margin-bottom: 1.6rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 103.5rem;
+    margin-top: 6rem;
+
+    @include mq(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+
+    @include mq(sm) {
+      max-height: 36.8rem;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+
+    @include mq(xs) {
+      max-height: 26.8rem;
+    }
+
+    @include mq("custom", max, 400) {
+      max-height: 23rem;
+    }
+
+    &.js-hide-box{
+      &--active {
+        max-height: none;
+      }
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24.7rem;
+    padding: 1.6rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(md) {
+      height: 18rem;
+    }
+
+    @include mq(xs) {
+      height: 13rem;
+      padding: 0.6rem;
+    }
+
+    @include mq(xxs) {
+      // align-items: stretch;
+      // height: 7.2rem;
+    }
+
+    @include mq("custom", max, 400) {
+      height: 11rem;
+    }
+  }
+
+  &__item-img {
+    height: 100%;
+  }
+
+  &__btn {
+    margin-top: 3rem;
+    margin-left: auto;
+
+    @include mq(sm, min) {
+      display: none;
+    }
+
+    &.js-hide-btn {
+      &::after {
+        transform: rotate(90deg);
+      }
+
+      .default-label {
+        display: inline-block;
+      }
+
+      .active-label {
+        display: none;
+      }
+
+      &--active {
+
+        &::after {
+          transform: rotate(-90deg);
+        }
+
+        .default-label {
+          display: none;
+        }
+        .active-label {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+-
+  list = [
+    {title: "Быстрый старт", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/1.svg"},
+    {title: "Непрерывная коммуникация", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/2.svg"},
+    {title: "Гибкость команды", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/3.svg"},
+    {title: "Проверенный подход", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/4.svg"},
+    // {title: "Налаженные процессы", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/5.svg"},
+    // {title: "Безопасность", text: "Оперативное формирование команды Собеседование по запросу", urlImg: "assets/images/benefits-roster/6.svg"}
+  ]
+
+section.benefits-roster
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right.js-hide-wrapper
+        h2.benefits-roster__title
+          | Обеспечим высокое качество <br> вашего программного продукта <br>в долгосрочной перспективе
+        ul.benefits-roster__items.js-hide-box
+          each i in list
+            li.benefits-roster__item
+              span.benefits-roster__item-title= i.title
+              p.benefits-roster__item-text= i.text
+              img(src= i.urlImg alt="" class="benefits-roster__item-img" width="430px" height="430px")
+        button.benefits-roster__btn.button-with-arrow.button-with-arrow--white-bg.js-hide-btn(type="button")
+              span.default-label
+                | Показать ещё
+              span.active-label
+                | скрыть

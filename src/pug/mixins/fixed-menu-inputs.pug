@@ -1,0 +1,16 @@
+mixin fixed-menu-inputs(title, arroyLink, buttonWidthArrow, mod)
+  div(class=`fixed-menu-inputs ${mod ? mod : ''}`)&attributes(attributes)
+    span.fixed-menu-inputs__title= title
+    if arroyLink
+      ul.fixed-menu-inputs__list
+        each item, index in arroyLink
+          - var activeCheck = index === 4 ? true : false
+          li.fixed-menu-inputs__item
+            label.fixed-menu-inputs__item-label
+              input.visually-hidden(type="radio" name="industry" checked=activeCheck)
+              span.fixed-menu-inputs__item-link(href="#")= item.name
+    if buttonWidthArrow
+      a.fixed-menu-inputs__box-link(href="#")
+        +icon-mono("arrow-left-long")(class="fixed-menu-inputs__icon" width="16px" height="8px")
+        .fixed-menu-inputs__box-link-text
+          | Назад к списку

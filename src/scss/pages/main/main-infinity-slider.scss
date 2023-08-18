@@ -1,0 +1,49 @@
+.main-infinity-slider {
+  background-color: var(--color-grayscale-900);
+  &__wrapper {
+    width: 100%;
+    min-width: 0;
+    padding: 16rem 0;
+    border-bottom: 0.1rem solid rgb(255 255 255 / 5%);
+
+    @include mq(lg) {
+      padding: 10rem 0;
+    }
+
+    @include mq(sm) {
+      padding: 6rem 0;
+    }
+  }
+
+  &__swiper {
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-slide {
+    width: 15rem;
+
+    @include mq(lg) {
+      width: 12rem;
+    }
+
+    @include mq(sm) {
+      width: 8.8rem;
+    }
+  }
+
+  &__swiper-item {
+    display: block;
+  }
+
+  &__swiper-item-img {
+    opacity: 0.4;
+    filter: grayscale(100%) brightness(200%);
+  }
+}

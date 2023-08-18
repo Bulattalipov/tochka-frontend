@@ -1,0 +1,133 @@
+.modal__container(data-target="modal-callback")
+  .modal__content
+    .modal__close-btn-wrapper.modal-close
+      button.button-reset.modal__close-btn(type="button")
+        span
+        span
+      span.modal__close-btn-text
+        | закрыть
+    .modal__content-inner
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          .modal__content-box
+            h2.modal__content-box-title
+              | Оставить заявку
+            .modal__content-box-desc
+              p
+                | Ваш запрос ценен для нас и будет обработан в кратчайшие сроки
+      +form-block(true, false)
+
+
+.modal__container(data-target="modal-resume")
+  .modal__content
+    .modal__close-btn-wrapper.modal-close
+      button.button-reset.modal__close-btn(type="button")
+        span
+        span
+      span.modal__close-btn-text
+        | закрыть
+    .modal__content-inner
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          .modal__content-box
+            h2.modal__content-box-title
+              | Оставить заявку
+            .modal__content-box-desc
+              p
+                | Пожалуйста, заполните форму, и наш специалист свяжется с вами
+      +form-block(false, true)
+
+
+.modal__container(data-target="modal-success")
+  .modal__content.modal__content--height
+    .modal__close-btn-wrapper.modal-close
+      button.button-reset.modal__close-btn(type="button")
+        span
+        span
+      span.modal__close-btn-text
+        | закрыть
+    .modal__content-inner
+      .modal__result
+        +icon-multi('success')(class="modal__result-icon" width="80px" height="80px")
+        h2.modal__result-title
+          | Спасибо за заявку!
+        .modal__result-desc
+          p
+            | Вышлем подтверждение о получении заявки вам на почту!
+        a.button.button--lighter(href="#")
+          | ОтЛично!
+
+
+.modal__container(data-target="modal-error")
+  .modal__content.modal__content--height
+    .modal__close-btn-wrapper.modal-close
+      button.button-reset.modal__close-btn(type="button")
+        span
+        span
+      span.modal__close-btn-text
+        | закрыть
+    .modal__content-inner
+      .modal__result
+        +icon-multi('error')(class="modal__result-icon" width="80px" height="80px")
+        h2.modal__result-title
+          | Ошибка!
+        .modal__result-desc
+          p
+            | Не удалось отправить заявку. Пожалуйста, попробуйте позже или свяжитесь с нами другим способом
+        a.button.button--lighter(href="#")
+          | повторить
+
+
+
+.modal__container.modal--request(data-target="modal-request")
+  .modal__content
+    .modal__close-btn-wrapper.modal-close
+      button.button-reset.modal__close-btn(type="button")
+        span
+        span
+      span.modal__close-btn-text
+        | закрыть
+    .modal__content-inner
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          .modal__request
+            h2.modal__request-title
+              | Заявка <br> на скачивание
+            .modal__request-box
+              .modal__request-box-desc
+                p
+                  | Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД
+              .modal__request-box-text
+                | Учебный центр ТК проводит онлайн-курсы по тестированию для кандидатов без опыта работы, которые решили начать карьеру тестировщика с нуля.
+            .modal__request-info
+              | Заполните и отправьте заявку, чтобы мы могли прислать материал Вам на почту
+            .form-block__form-wrapper
+              form.form-block__form(active="/" data-need-validation="")
+                ul.form-block__form-inputs
+                  li.input.js-validation-wrapper
+                    input.input__element(type="text" placeholder="Имя" name="name" data-parsley-maxlength='255' data-parsley-fio data-parsley-one-space required)
+                    span.input__placeholder
+                      | ФИО
+                  li.input.js-validation-wrapper
+                    input.input__element(type="email" placeholder="Почта" name="email" data-parsley-last-element data-parsley-maxlength='255' data-parsley-email data-parsley-required)
+                    span.input__placeholder
+                      | Почта
+                  li.input.js-validation-wrapper
+                    input.input__element(class="" type="text" placeholder="Телефон" name="telephon" data-parsley-minlength="11" data-parsley-phone2 data-parsley-maxlength='25' data-parsley-required)
+                    span.input__placeholder
+                      | Телефон
+                  li.input.js-validation-wrapper
+                    input.input__element(type="text" placeholder="Компания" name="company" data-parsley-maxlength='255')
+                    span.input__placeholder
+                      | Компания
+                .form-block__form-box
+                  .form-block__form-box-wrapper
+                    button.form-block__form-button.button.button--lighter(type="submit")
+                      | Отправить
+                    p.form-block__form-policy
+                      | Нажимая кнопку вы даёте согласие на обработку ваших персональных данных и соглашаетесь c
+                      a.form-block__form-policy-link(href="#")
+                        | политикой конфиденциальности

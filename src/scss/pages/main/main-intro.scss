@@ -1,0 +1,264 @@
+.main-intro {
+  will-change: auto;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  min-height: 70rem;
+  overflow: hidden;
+  color: var(--color-grayscale-300);
+  background-color: var(--color-grayscale-900);
+
+  @media screen and (max-height: 500px) {
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    object-position: top right;
+    background-color: var(--color-grayscale-900);
+
+    @include mq(xs) {
+      width: 112%;
+      height: 49%;
+      object-fit: cover;
+      object-position: 31% 50%;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+  }
+
+  &__bg-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-height: fit-content;
+    -moz-height: fit-content;
+    -ms-height: fit-content;
+    height: fit-content;
+    background-color: rgba(14, 16, 20, 0.1);
+    background-size: cover;
+    -webkit-backdrop-filter: blur(60px);
+    -moz-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    clip-path: url(#pentagon);
+
+    @include mq(sm) {
+      left: -25%;
+      width: 150%;
+    }
+  }
+
+  &__bg-icon-svg {
+    height: auto;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    min-height: 70rem;
+    padding: 11rem 0;
+    min-width: 0;
+
+    @media screen and (max-height: 500px) {
+      height: 100%;
+    }
+  }
+
+  &__title {
+    max-width: 135rem;
+    margin-bottom: 5rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-heading-1);
+    line-height: 1.1;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq(custom, max, 391) {
+      font-size: 7rem;
+    }
+
+    .line {
+      overflow: hidden;
+      margin-bottom: -3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include mq(sm) {
+        margin-bottom: -1rem;
+      }
+
+      @include mq(custom, max, 391) {
+        margin-bottom: -0.5rem;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 50rem;
+    font: var(--font-text-t1-100);
+    opacity: 0.5;
+
+    @media screen and (max-height: 700px) {
+      margin-bottom: 4rem;
+    }
+
+    .line {
+      overflow: hidden;
+    }
+  }
+
+  &__footer-line {
+    width: auto;
+    height: 0.1rem;
+    background-color: rgb(255 255 255 / 15%);
+    margin: 0 -100%;
+  }
+
+  &__footer-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 0;
+    width: 100%;
+  }
+
+  &__footer {
+    min-width: 0;
+    width: 100%;
+
+    @include mq(lg) {
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -6rem;
+      padding: 3rem 6rem;
+      scrollbar-width: none;
+      column-gap: 2rem;
+      row-gap: 5rem;
+
+      @include mq(lg) {
+        display: flex;
+        margin: 0;
+        column-gap: 0;
+        row-gap: 0;
+        max-width: 100%;
+        transition-timing-function: linear !important;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    .swiper-slide {
+
+      @include mq(lg) {
+        width: 30rem;
+      }
+
+      @include mq(sm) {
+        width: 20rem;
+      }
+    }
+  }
+
+  &__footer-item {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 32rem;
+
+    &::before {
+      flex-shrink: 0;
+      width: 0.1rem;
+      height: auto;
+      background-color: var(--color-grayscale-100);
+      opacity: 0.15;
+      content: '';
+
+      @include mq(lg) {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      justify-content: flex-start;
+
+      .main-intro__footer-item-box {
+        margin-left: 0;
+      }
+      .main-intro__footer-item-number {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(4n+1) {
+
+      &:before {
+        display: none;
+      }
+    }
+
+    @include mq(custom, min, 1200) {
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__footer-item-box {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+
+    @include mq(lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__footer-item-number {
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-other-number-2);
+  }
+
+  &__footer-item-text {
+    width: 16rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-text-t5-up);
+    text-transform: uppercase;
+    opacity: 0.5;
+
+    @include mq(lg) {
+      width: auto;
+    }
+  }
+
+}

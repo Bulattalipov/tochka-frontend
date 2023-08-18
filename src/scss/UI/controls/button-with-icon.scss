@@ -1,0 +1,43 @@
+.button-with-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.2rem 1.6rem;
+  color: var(--color-grayscale-200);
+  font: var(--font-button-1);
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0.1rem solid rgb(255 255 255 / 10%);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: color var(--transition), background-color var(--transition);
+
+  &:hover {
+    color: var(--color-primary-light-blue);
+  }
+
+  &:active,
+  &:focus {
+    color: var(--color-grayscale-100);
+    border: 0.2rem solid var(--color-primary-light-blue);
+  }
+
+  &:disabled {
+    color: #6C6D80;
+    background-color: #C2C2C2;
+  }
+
+  @include mq(lg) {
+    padding: 1.2rem 1.6rem;
+    font: var(--font-button-2);
+  }
+
+  @include mq("custom", max, 385) {
+    padding: 1.2rem 1.6rem;
+    font: var(--font-button-3);
+  }
+
+  &__text {
+    margin-left: 0.8rem;
+    font: var(--font-button-2);
+  }
+}

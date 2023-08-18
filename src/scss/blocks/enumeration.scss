@@ -1,0 +1,254 @@
+.enumeration {
+  padding: 14rem 0;
+  background-color: var(--color-grayscale-900);
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  &--white-bg {
+    background-color: var(--color-grayscale-200);
+
+    .section-inner__right {
+      grid-column: span 16;
+    }
+
+    .enumeration__title {
+      color: var(--color-grayscale-900);
+    }
+
+    .enumeration__item {
+      color: var(--color-grayscale-900);
+      border-top: 0.1rem solid rgb(37 41 50 / 20%);
+    }
+
+    .enumeration__item-number::before {
+      color: var(--color-grayscale-900);
+    }
+
+    .enumeration__item-title {
+      color: var(--color-grayscale-900);
+      pointer-events: none;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .enumeration__item {
+      grid-template-columns: repeat(16, 1fr);
+    }
+
+    .enumeration__item-text {
+      grid-column: 10 / 17;
+      opacity: 0.6;
+    }
+  }
+
+  .section-inner__left {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 2.5rem;
+    color: rgb(234 233 243 / 30%);
+    font: var(--font-common-label-1);
+    text-transform: uppercase;
+
+    @include mq(lg) {
+      padding-top: 0;
+    }
+
+    @include mq(md) {
+      display: none;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    max-width: 83rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-heading-3);
+    line-height: 1.1;
+
+    @include mq(lg) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq(sm) {
+      margin-right: 0;
+    }
+
+    .line {
+      overflow: hidden;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include mq(sm) {
+      position: relative;
+      margin-left: auto;
+    }
+  }
+
+  &__desc {
+    font: var(--font-text-t3);
+    opacity: 0.6;
+
+    @include mq(sm) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items {
+    padding-top: 5rem;
+    counter-reset: list;
+
+    @include mq(lg) {
+      padding-top: 3rem;
+    }
+
+    @include mq(md) {
+      display: flex;
+      gap: 1.8rem;
+      margin-right: calc(-2.4 * var(--content-padding));
+      margin-left: calc(-2.4 * var(--content-padding));
+      padding-right: calc(2.4 * var(--content-padding));
+      padding-left: calc(2.4 * var(--content-padding));
+      overflow-x: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+
+    @include mq(sm) {
+      padding-top: 1rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(19, 1fr);
+    gap: 2rem;
+    padding: 0.8rem 0;
+    color: var(--color-grayscale-300);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.15);
+
+    &:hover {
+      .enumeration__item-img {
+        opacity: 1;
+      }
+    }
+
+    @include mq(md) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      min-width: 20.8rem;
+      padding: 2rem 0;
+    }
+  }
+
+  &__item-number {
+    grid-column: span 2;
+    margin: 2.4rem 0;
+    counter-increment: list;
+
+    &::before {
+      color: var(--color-grayscale-300);
+      font: var(--font-common-label-2);
+      content: counter(list, decimal-leading-zero) "";
+    }
+
+    @include mq(md) {
+      margin: 0 0 1.2rem;
+    }
+  }
+
+  &__item-title {
+    grid-column: span 6;
+    margin: 2.4rem 0;
+    font: var(--font-heading-5);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      content: '';
+    }
+
+    @include mq(md) {
+      margin: 0 0 1.6rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__item-img-wrapper {
+    position: relative;
+    display: flex;
+    grid-column: span 4;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 13.8rem;
+    margin: 0 1rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+
+  &__item-text {
+    grid-column: span 7;
+    margin: 2.4rem 0;
+    padding-left: 7rem;
+    font: var(--font-text-t3);
+    opacity: 0.5;
+
+    @include mq(lg) {
+      padding-left: 1rem;
+    }
+
+    @include mq(md) {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

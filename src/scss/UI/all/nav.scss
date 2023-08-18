@@ -1,0 +1,20 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    margin-right: 2.8rem;
+
+    &:last-child {
+      margin-top: 0;
+    }
+  }
+
+  &__list-link {
+    @include interactive;
+    font: var(--font-text-t5-up);
+    text-transform: uppercase;
+    transition: color 0.1s;
+  }
+}

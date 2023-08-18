@@ -1,0 +1,33 @@
+-
+  listSlide3 = [
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"},
+    {urlImg: "assets/images/with-slider-design/3.jpg"},
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"},
+    {urlImg: "assets/images/with-slider-design/3.jpg"},
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"}
+  ]
+
+section.with-slider-user
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        .with-slider-user__slider.js-slider-wrapper
+          .with-slider-user__swiper-wrapper
+            .with-slider-user__swiper.swiper
+              ul.swiper-wrapper
+                each item in listSlide3
+                  li.swiper-slide
+                    .with-slider-user__swiper-item
+                      .with-slider-user__swiper-item-content
+                        blockquote.with-slider-user__swiper-item-content-text
+                          | …Выделенная команда «Точка качества» подходит к выполнению задач со всей ответственностью. Они неоднократно шли нам навстречу и работали сверх нормы, если была такая необходимость. «Точка качества» всегда предоставляет подробную и ценную информацию о наших тестовых моделях. Мы очень довольны качеством проведённого тестирования
+                        +user-cards("assets/images/with-slider-user/Innogames-logo.svg")
+                      .with-slider-user__swiper-item-img-wrapper
+                        img.with-slider-user__swiper-item-img(src="assets/images/with-slider-user/1.jpg" alt="")
+          .with-slider-user__slider-nav
+            +slider-nav(class="with-slider-user__slider-nav-btn slider-nav--white-bg")
+            .swiper-scrollbar

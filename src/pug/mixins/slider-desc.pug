@@ -1,0 +1,152 @@
+mixin slider-desc(block1, block2)
+  if block1
+    section.slider-desc
+      .site-container
+        .slider-desc__wrapper
+          .section-inner
+            .section-inner__left
+            .section-inner__right
+              h2.slider-desc__title
+                | Нас рекомендуют
+              .slider-desc__box-wrapper
+                .slider-desc__box
+                  .slider-desc__box-number
+                    span.slider-desc__box-number-span
+                      | >50
+                  .slider-desc__box-text
+                    | Положительных отзывов
+          .slider-desc__slider.js-slider-desc
+            .slider-desc__swiper-navigation
+              +slider-nav(class="slider-desc__nav")
+            .slider-desc__swiper-wrapper
+              .slider-desc__swiper.swiper
+                ul.swiper-wrapper
+                  li.swiper-slide
+                    .slider-desc__swiper-item
+                      +imgLazy("assets/images/slider-desc/1.svg")(class="slider-desc__slider-item-img")
+                      span.slider-desc__swiper-item-title
+                        | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                      .slider-desc__swiper-item-text
+                        p
+                          | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                      .slider-desc__swiper-item-user
+                        span.slider-desc__swiper-item-user-title
+                          | Виктор Уголников
+                      .slider-desc__swiper-item-user-projects
+                        | Директор «ООО Маркетплейс» выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество Директор «ООО Маркетплейс» выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество
+                  li.swiper-slide
+                    .slider-desc__swiper-item
+                      +imgLazy("assets/images/slider-desc/2.svg")(class="slider-desc__slider-item-img")
+                      span.slider-desc__swiper-item-title
+                        | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                      .slider-desc__swiper-item-text
+                        p
+                          | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов» «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                      .slider-desc__swiper-item-user
+                        span.slider-desc__swiper-item-user-title
+                          | Виктор Уголников
+                        .slider-desc__swiper-item-user-projects
+                          | Директор «ООО Маркетплейс»
+                  li.swiper-slide
+                    .slider-desc__swiper-item
+                      +imgLazy("assets/images/slider-desc/3.svg")(class="slider-desc__slider-item-img")
+                      span.slider-desc__swiper-item-title
+                        | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                      .slider-desc__swiper-item-text
+                        p
+                          | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                      .slider-desc__swiper-item-user
+                        span.slider-desc__swiper-item-user-title
+                          | Виктор Уголников
+                        .slider-desc__swiper-item-user-projects
+                          | Директор «ООО Маркетплейс»
+                  li.swiper-slide
+                    .slider-desc__swiper-item
+                      +imgLazy("assets/images/slider-desc/3.svg")(class="slider-desc__slider-item-img")
+                      span.slider-desc__swiper-item-title
+                        | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                      .slider-desc__swiper-item-text
+                        p
+                          | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                      .slider-desc__swiper-item-user
+                        span.slider-desc__swiper-item-user-title
+                          | Виктор Уголников
+                        .slider-desc__swiper-item-user-projects
+                          | Директор «ООО Маркетплейс»
+  if block2
+    section.slider-desc(data-modif="\[\"white\"\]")
+      .site-container
+        .slider-desc__wrapper
+          .section-inner
+            .section-inner__left
+            .section-inner__right
+              h2.slider-desc__title
+                | Довольные клиенты о нас
+              .slider-desc__slider.js-slider-desc
+                .slider-desc__swiper-navigation
+                  +slider-nav(class="slider-desc__nav")
+                .slider-desc__swiper-wrapper
+                  .slider-desc__swiper.swiper
+                    ul.swiper-wrapper
+                      li.swiper-slide
+                        .slider-desc__swiper-item
+                          +imgLazy("assets/images/slider-desc/1.svg")(class="slider-desc__slider-item-img")
+                          span.slider-desc__swiper-item-title
+                            | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                          .slider-desc__swiper-item-text
+                            p
+                              | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                          .slider-desc__swiper-item-user
+                            span.slider-desc__swiper-item-user-title
+                              | Виктор Уголников
+                          .slider-desc__swiper-item-user-projects
+                            | Директор «ООО Маркетплейс» выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество Директор «ООО Маркетплейс» выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество
+                          a.slider-desc__swiper-btn.button.button--lighter(href="#")
+                            | Подробнее о проекте
+                      li.swiper-slide
+                        .slider-desc__swiper-item
+                          +imgLazy("assets/images/slider-desc/2.svg")(class="slider-desc__slider-item-img")
+                          span.slider-desc__swiper-item-title
+                            | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                          .slider-desc__swiper-item-text
+                            p
+                              | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов» «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                          .slider-desc__swiper-item-user
+                            span.slider-desc__swiper-item-user-title
+                              | Виктор Уголников
+                            .slider-desc__swiper-item-user-projects
+                              | Директор «ООО Маркетплейс»
+                          a.slider-desc__swiper-btn.button.button--lighter(href="#")
+                            | Подробнее о проекте
+                      li.swiper-slide
+                        .slider-desc__swiper-item
+                          +imgLazy("assets/images/slider-desc/3.svg")(class="slider-desc__slider-item-img")
+                          span.slider-desc__swiper-item-title
+                            | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                          .slider-desc__swiper-item-text
+                            p
+                              | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                          .slider-desc__swiper-item-user
+                            span.slider-desc__swiper-item-user-title
+                              | Виктор Уголников
+                            .slider-desc__swiper-item-user-projects
+                              | Директор «ООО Маркетплейс»
+                          a.slider-desc__swiper-btn.button.button--lighter(href="#")
+                            | Подробнее о проекте
+                      li.swiper-slide
+                        .slider-desc__swiper-item
+                          +imgLazy("assets/images/slider-desc/3.svg")(class="slider-desc__slider-item-img")
+                          span.slider-desc__swiper-item-title
+                            | «Благодарность за продуктивное многолетнее сотрудничество и профессиональную работу»
+                          .slider-desc__swiper-item-text
+                            p
+                              | «ООО „Маркетплейс“ выражает благодарность компании „Точка качества“ за продуктивное многолетнее сотрудничество и профессиональную работу в области тестирования ПО. В результате партнёрства компаний успешно реализованы проекты редизайна, обновления сервиса покупательского продукта, а так же подключения новых логистических операторов»
+                          .slider-desc__swiper-item-user
+                            span.slider-desc__swiper-item-user-title
+                              | Виктор Уголников
+                            .slider-desc__swiper-item-user-projects
+                              | Директор «ООО Маркетплейс»
+                          a.slider-desc__swiper-btn.button.button--lighter(href="#")
+                            | Подробнее о проекте
+
+

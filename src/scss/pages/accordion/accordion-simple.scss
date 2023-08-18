@@ -1,0 +1,146 @@
+.accordion-simple {
+  background-color: var(--color-grayscale-200);
+
+  &__wrapper {
+    padding: 10rem 3.2rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(lg) {
+      padding: 6rem 3.2rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.4rem 1.4rem;
+    }
+  }
+
+  &__items {
+    max-width: 103.5rem;
+    counter-reset: list;
+  }
+
+  &__item {
+    position: relative;
+    border-top: 0.1rem solid rgb(37 41 50 / 20%);
+
+    &.active {
+      .accordion-simple__item-arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 4.3rem;
+      font: var(--font-common-label-2);
+      content: counter(list, decimal-leading-zero) "";
+      counter-increment: list;
+
+      @include mq(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2rem 0 3.2rem 12.8rem;
+    cursor: pointer;
+
+    @include mq(lg) {
+      padding: 3.2rem 0 3.2rem 8rem;
+    }
+
+    @include mq(sm) {
+      padding: 2rem 0;
+    }
+  }
+
+  &__item-title {
+    color: #252932;
+    font: var(--font-heading-5);
+  }
+
+  &__item-arrow {
+    flex-shrink: 0;
+    margin-left: 2rem;
+    fill: transparent;
+    stroke: var(--color-primary-light-blue);
+    stroke-width: 0.2rem;
+
+    @include mq(sm) {
+      width: 1.05rem;
+      height: 0.888rem;
+      stroke-width: 0.3rem;
+    }
+  }
+
+  &__item-list-wrapper {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item-list {
+    margin-right: 5rem;
+    margin-bottom: 7rem;
+
+    @include mq(lg) {
+      margin-right: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    @include mq(sm) {
+      margin-right: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__item-elem {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 2.4rem;
+    color: rgb(14 16 20 / 60%);
+    font: var(--font-text-t3);
+
+    @include mq(sm) {
+      margin-bottom: 0.8rem;
+      padding-left: 2rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.4rem;
+      left: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: url("../images/with-text/pentagon.svg");
+      background-size: cover;
+      content: "";
+
+      @include mq(sm) {
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    font: var(--font-heading-3);
+
+    @include mq(lg) {
+      margin-bottom: 5rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@keyframes backgroundMovement {
+  0% {
+      background-position: 100%;
+  }
+  100% {
+      background-position: -100%;
+  }
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+
+  &.loading {
+    overflow: hidden;
+    border-radius: 0.4rem;
+    pointer-events: none;
+
+    background: linear-gradient(270deg, #EFF1F4 0, #EFF1F4 80%, #EFF1F4 100%);
+    background-size: 200%;
+
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: backgroundMovement;
+    animation-timing-function: linear;
+
+    .swiper-wrapper,
+    .progressbar,
+    .navigation,
+    .pagination {
+      opacity: 0;
+    }
+  }
+}

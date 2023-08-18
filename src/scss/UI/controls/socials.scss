@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.socials__item {
+  @include interactive-svg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  margin-right: 1rem;
+  border: 0.1rem solid rgb(255 255 255 / 15%);
+  border-radius: 0.5rem;
+}

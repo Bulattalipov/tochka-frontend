@@ -1,0 +1,9 @@
+section.main-infinity-slider
+  .site-container-2
+    .main-infinity-slider__wrapper
+      .main-infinity-slider__swiper.swiper.js-infinity-slider
+        .swiper-wrapper
+          each i in Array.from(Array(7).keys())
+            .swiper-slide
+              .main-infinity-slider__swiper-item
+                +imgLazy(`assets/images/main-infinity-slider/${i}.png`, "icon")(class="main-infinity-slider__swiper-item-img")

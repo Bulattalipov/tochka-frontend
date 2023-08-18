@@ -1,0 +1,115 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  --fs-html: 0.595238095vw;
+
+  /* typography  */
+  --main-ff: "FuturaPT", sans-serif;
+  --second-ff: "FuturaPT", sans-serif;
+
+  /* colors */
+  --color-grayscale-100: #FFFFFF;
+  --color-grayscale-200: #F7F7FA;
+  --color-grayscale-300: #EAE9F3;
+  --color-grayscale-800: #16181D;
+  --color-grayscale-900: #0E1014;
+  --color-primary-dark-blue: #26264F;
+  --color-primary-medium-blue: #373774;
+  --color-primary-light-blue: #7271EF;
+  --color-secondary-gradient: linear-gradient(143.11deg, #7271EF 15.68%, #FF5281 65.97%, #FF7C52 86.31%);
+  --color-secondary-pink: #FF5281;
+
+  /* fonts */
+  --font-body: 400 2rem/1.1 var(--main-ff);
+
+  --font-heading-1: 400 15rem/80% var(--main-ff);
+  --font-heading-2: 400 13rem/90% var(--main-ff);
+  --font-heading-3: 400 7.4rem/100% var(--main-ff);
+  --font-heading-4: 400 4rem/90% var(--main-ff);
+  --font-heading-5: 400 3.6rem/100% var(--main-ff);
+
+  --font-text-link: 400 1.6rem/110% var(--main-ff);
+  --font-text-t1-90: 400 2.8rem/100% var(--main-ff);
+  --font-text-t1-100: 400 2.8rem/100% var(--main-ff);
+  --font-text-t2: 400 2.4rem/110% var(--main-ff);
+  --font-text-t3: 400 2rem/110% var(--main-ff);
+  --font-text-t3-up: 450 2rem/110% var(--main-ff);
+  --font-text-t4: 400 1.6rem/110% var(--main-ff);
+  --font-text-t4-up: 450 1.6rem/110% var(--main-ff);
+  --font-text-t5: 400 1.4rem/110% var(--main-ff);
+  --font-text-t5-up: 450 1.4rem/110% var(--main-ff);
+  --font-text-t6: 400 1.2rem/100% var(--main-ff);
+  --font-text-t6-up: 450 1.2rem/100% var(--main-ff);
+
+  --font-other-number-1: 400 7.4rem/80% var(--main-ff);
+  --font-other-number-2: 400 5rem/80% var(--main-ff);
+
+  --font-button-1: 400 1.6rem/100% var(--main-ff);
+  --font-button-2: 400 1.4rem/100% var(--main-ff);
+  --font-button-3: 400 1.2rem/100% var(--main-ff);
+
+  --font-common-placeholder: 400 2rem/110% var(--main-ff);
+  --font-common-label-1: 450 1.6rem/100% var(--main-ff);
+  --font-common-label-2: 450 1.4rem/100% var(--main-ff);
+  --font-common-label-3: 450 1.2rem/100% var(--main-ff);
+
+  /* etc */
+  --transition: 200ms ease-in;
+  --content-padding: 2.8rem;
+  --content-padding-2: 6rem;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";
+@import "./blocks/**/*";
+@import "./parts/**/*";
+
+
+@include mq(lg) {
+  :root {
+    /* fonts */
+    --font-heading-1: 400 11rem/80% var(--main-ff);
+    --font-heading-2: 400 10rem/90% var(--main-ff);
+    --font-heading-3: 400 5.2rem/100% var(--main-ff);
+  }
+}
+
+@include mq(sm) {
+  :root {
+    /* fonts */
+    --font-heading-1: 400 8rem/80% var(--main-ff);
+    --font-heading-2: 400 3.6rem/90% var(--main-ff);
+    --font-heading-3: 400 3.6rem/100% var(--main-ff);
+    --font-heading-4: 400 3rem/90% var(--main-ff);
+    --font-heading-5: 400 2.4rem/100% var(--main-ff);
+
+    --font-text-link: 400 1.2rem/110% var(--main-ff);
+    --font-text-t1-90: 400 2rem/100% var(--main-ff);
+    --font-text-t1-100: 400 2rem/100% var(--main-ff);
+    --font-text-t2: 400 1.6rem/110% var(--main-ff);
+    --font-text-t3: 400 1.4rem/110% var(--main-ff);
+    --font-text-t3-up: 450 1.4rem/110% var(--main-ff);
+    --font-text-t4: 400 1.2rem/110% var(--main-ff);
+    --font-text-t4-up: 450 1.2rem/110% var(--main-ff);
+    --font-text-t5: 400 1.2rem/110% var(--main-ff);
+    --font-text-t5-up: 450 1.2rem/110% var(--main-ff);
+    --font-text-t6: 400 1rem/100% var(--main-ff);
+    --font-text-t6-up: 450 1rem/100% var(--main-ff);
+
+    --font-other-number-1: 400 3rem/80% var(--main-ff);
+    --font-other-number-2: 400 3rem/80% var(--main-ff);
+
+    /* etc */
+    --content-padding: 1rem;
+    --content-padding-2: 2.4rem;
+  }
+}
+
+@include mq("custom", max, 376) {
+  :root {
+    /* fonts */
+    --font-heading-3: 400 3rem/90% var(--main-ff);
+  }
+}

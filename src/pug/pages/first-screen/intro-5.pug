@@ -1,0 +1,25 @@
+section.intro.intro--white-bg(style="background-image: none")
+  .site-container-2
+    .intro__wrapper.intro__wrapper--small
+      .section-inner
+        .section-inner__left
+          +fixed-menu("Инфоцентр", [], true, "fixed-menu--white-bg fixed-menu--dark")
+        .section-inner__right
+          .intro__inner
+            h1.intro__title.intro__title--h3
+              | Делимся опытом на MWC Barcelona 2022: Точка качества среди участников
+            .intro__contain
+              +user-cards("assets/images/intro/people.jpg")
+              .intro__contain-time
+                span.intro__contain-time-data
+                  | 31 марта 2022
+                .intro__contain-time-text
+                  | Дата публикации
+            .intro__img-wrapper
+              +imgLazy("assets/images/main-blogs/1.jpg")(class="intro__img")
+              ul.intro__img-list
+                li.intro__img-list-item
+                  | Интервью
+            .intro__desc
+              p
+                | Текст — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов

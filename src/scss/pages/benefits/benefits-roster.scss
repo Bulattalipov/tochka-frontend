@@ -1,0 +1,143 @@
+.benefits-roster {
+  padding: 14rem 0;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  .section-inner__right {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 16;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    font: var(--font-heading-3);
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    width: 100%;
+
+    @include mq(sm) {
+      grid-template-columns: repeat(1, 1fr);
+
+      &.js-hide-box {
+        .benefits-roster__item {
+          &:not(:first-child, :nth-child(2), :nth-child(3)) {
+            display: none;
+          }
+        }
+      }
+
+      &.js-hide-box--active {
+        .benefits-roster__item {
+          &:not(:first-child, :nth-child(2), :nth-child(3)) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 22rem;
+    padding: 2.8rem;
+    overflow: hidden;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(sm) {
+      min-height: 13rem;
+      padding: 1.4rem;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 2rem;
+    font: var(--font-heading-5);
+    line-height: 100%;
+  }
+
+  &__item-text {
+    font: var(--font-text-t3);
+    opacity: 0.6;
+  }
+
+  &__item-img {
+    position: absolute;
+    right: -11rem;
+    bottom: -20rem;
+    width: 43rem;
+    height: 43rem;
+
+    @include mq(lg) {
+      right: -9rem;
+      bottom: -13rem;
+      width: 35rem;
+      height: 35rem;
+    }
+
+    @include mq(sm) {
+      right: -6rem;
+      bottom: -9rem;
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 3rem;
+    margin-left: auto;
+
+    @include mq(sm, min) {
+      display: none;
+    }
+
+    &.js-hide-btn {
+      &::after {
+        transform: rotate(90deg);
+      }
+
+      .default-label {
+        display: inline-block;
+      }
+
+      .active-label {
+        display: none;
+      }
+
+      &--active {
+
+        &::after {
+          transform: rotate(-90deg);
+        }
+
+        .default-label {
+          display: none;
+        }
+
+        .active-label {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+-
+  menu = [
+    {name: "О нас", mod: "fixed-menu__item-link--active"},
+    {name: "Клиенты", mod: ""},
+    {name: "Принципы сотрудничества", mod: ""},
+    {name: "процессы", mod: ""}
+  ]
+
+section.intro.intro--height-big(style="background-image: url('assets/images/intro/bg-img-1.png')")
+  .site-container-2
+    .intro__wrapper
+      .section-inner
+        .section-inner__left
+          +fixed-menu("Компания", menu)
+        .section-inner__right
+          .intro__inner
+            h1.intro__title
+              | Процессы
+            .intro__desc
+              | Используйте наш богатый практический опыт для улучшения качества вашего ПО
+            .intro__advantages
+              .intro__advantages-item
+                +icon-multi("check-box")(class="intro__advantages-item-icon" width="40px" height="40px")
+                .intro__advantages-item-text
+                  | 10+ лет в сфере обеспечения качества ПО
+              .intro__advantages-item
+                +icon-multi("check-box")(class="intro__advantages-item-icon" width="40px" height="40px")
+                .intro__advantages-item-text
+                  | Подход, ориентированный на клиента
+              .intro__advantages-item
+                +icon-multi("check-box")(class="intro__advantages-item-icon" width="40px" height="40px")
+                .intro__advantages-item-text
+                  | Полная прозрачность процессов QA

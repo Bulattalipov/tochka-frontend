@@ -1,0 +1,117 @@
+.with-text-ordinary {
+  padding: 14rem 0;
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  &__wrapper {
+    padding: 0 3.2rem;
+
+    @include mq(lg) {
+      padding: 2.4rem 3.2rem;
+      background-color: var(--color-grayscale-100);
+      border-radius: 1rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.4rem 1.4rem;
+    }
+  }
+
+  .section-inner__left {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    font: var(--font-heading-3);
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__box-img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 37.2rem;
+    height: 22.1rem;
+    margin-right: 8.8rem;
+    overflow: hidden;
+    background-color: var(--color-grayscale-300);
+    border-radius: 1rem;
+
+    @include mq(lg) {
+      margin-right: 4rem;
+    }
+
+    @include mq(md) {
+      width: 32rem;
+      height: 19rem;
+    }
+
+    @include mq(sm) {
+      width: 27rem;
+      height: 16rem;
+      margin-right: 3rem;
+    }
+
+    @include mq(xs) {
+      display: none;
+    }
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__box-list {
+    max-width: 57.3rem;
+  }
+
+  &__box-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 2.4rem;
+    color: rgb(14 16 20 / 60%);
+    font: var(--font-text-t3);
+
+    @include mq(sm) {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.4rem;
+      left: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: url("../images/with-text/pentagon.svg");
+      background-size: cover;
+      content: "";
+
+      @include mq(sm) {
+        top: 0.3rem;
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
+}

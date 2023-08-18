@@ -1,0 +1,20 @@
+section.main-projects
+  .site-container-2
+    .main-projects__wrapper
+      h2.main-projects__title
+        | Наши проекты
+      .main-projects__slider
+        .main-projects__swiper-navigation
+          +slider-nav
+        .main-projects__swiper-wrapper
+          .main-projects__swiper.swiper.js-projects-slider
+            ul.swiper-wrapper
+              each i in Array.from(Array(4).keys())
+                li.swiper-slide
+                  +project("assets/images/main-projects/img-1.png", "", "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", true)
+      a.main-projects__link.button-with-arrow(href="#")
+        | Все проекты
+
+
+
+

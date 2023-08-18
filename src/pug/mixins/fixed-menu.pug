@@ -1,0 +1,20 @@
+mixin fixed-menu(title, arroyLink, buttonWidthArrow, mod, info)
+  div(class=`fixed-menu js-fixed-menu ${mod ? mod : ''}`)&attributes(attributes)
+    span.fixed-menu__title= title
+    if arroyLink
+      ul.fixed-menu__list
+        each i in arroyLink
+          li.fixed-menu__item
+            a.fixed-menu__item-link(href="#" class= i.mod tabindex="0")= i.name
+    if buttonWidthArrow
+      a.fixed-menu__box-link(href="#")
+        +icon-mono("arrow-left-long")(class="fixed-menu__icon" width="16px" height="8px")
+        .fixed-menu__box-link-text
+          | Назад к списку
+    if info
+      .fixed-menu__box-info
+        img.fixed-menu__box-info-img(src="assets/images/info-icon.svg" width="32px" height="32px" alt="")
+        .fixed-menu__box-info-text
+          | Учебный центр ТК проводит онлайн-курсы по тестированию для кандидатов без опыта работы, которые решили начать карьеру тестировщика с нуля. Подобную программу в год проходит более 700 слушателей, большая часть из которых получают работу тестировщика у нас в компании. Выберите курс и присоединяйтесь к нашей команде!
+
+

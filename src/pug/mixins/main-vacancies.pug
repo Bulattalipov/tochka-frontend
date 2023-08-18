@@ -1,0 +1,23 @@
+mixin main-vacancies
+  section.main-vacancies&attributes(attributes)
+    .site-container
+      .main-vacancies__wrapper
+        .main-vacancies__swiper-wrapper.js-images-swiper
+          .main-vacancies__swiper.swiper.loading
+            .swiper-wrapper
+              each i in Array.from(Array(3).keys())
+                .swiper-slide
+                  .main-vacancies__swiper-item
+                    +imgLazy("assets/images/main-vacancies/main-img.jpg", `Общение ${i}`)(class="main-vacancies__swiper-img")
+          +slider-nav(class="main-vacancies__swiper-navigation")
+        .main-vacancies__info
+          h2.main-vacancies__info-title
+            | Вакансии
+          .main-vacancies__info-text
+            p
+              | Мы постоянно растём.
+            p
+              | Присоединяйтесь!
+          a.main-vacancies__info-link.button.button--lighter(href="#")
+            | Смотреть вакансии
+

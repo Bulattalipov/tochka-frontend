@@ -1,0 +1,140 @@
+.stages-pile {
+  padding: 14rem 0;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 11rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  .section-inner__left {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    font: var(--font-heading-3);
+
+    @include mq(md) {
+      margin-bottom: 5rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    max-width: 103.4rem;
+
+    @include mq(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    &.active {
+      .stages-pile__item-box-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__item-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.6rem 2.4rem 2.4rem;
+
+    @include mq(sm) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__item-box-img-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 6.2rem;
+    height: 5.4rem;
+    margin-right: 2.4rem;
+    overflow: hidden;
+
+    @include mq(sm) {
+      width: 3rem;
+      height: 2.6rem;
+    }
+
+    @include mq(xs) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__item-box-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__item-box-title {
+    font: var(--font-text-t3-up);
+    text-transform: uppercase;
+
+    @include mq(xs) {
+      margin-right: auto;
+    }
+  }
+
+  &__item-box-arrow {
+    @include mq(md) {
+      flex-shrink: 0;
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-left: 1rem;
+      background-image: url('../images/benefits-reverse/two-arrow-down-2.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item-text-wrapper {
+    @include mq(md) {
+      height: 0;
+    }
+  }
+
+  &__item-text {
+    padding: 0 2.4rem 3.4rem 2.4rem;
+    font: var(--font-text-t3);
+    opacity: 0.6;
+
+    @include mq(sm) {
+      padding: 0.4rem 1.5rem 1.6rem 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

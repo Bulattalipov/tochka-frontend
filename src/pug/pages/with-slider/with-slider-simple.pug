@@ -1,0 +1,30 @@
+-
+  listSlide = [
+    {urlImg: "assets/images/with-cards/1.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: false},
+    {urlImg: "assets/images/with-cards/2.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/3.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: true},
+    {urlImg: "assets/images/with-cards/4.jpg", altUrl: "", text: "Консалтинг в сфере обеспечения качества", logo: false},
+    {urlImg: "assets/images/with-cards/5.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: false},
+    {urlImg: "assets/images/with-cards/6.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/7.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/8.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true}
+  ]
+
+
+section.with-slider-simple
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        h2.with-slider-simple__title
+          | Реализованные проекты
+        .with-slider-simple__slider.js-slider-wrapper
+          .with-slider-simple__swiper-wrapper
+            .with-slider-simple__swiper.swiper
+              ul.swiper-wrapper
+                each i in listSlide
+                  li.swiper-slide
+                    +project(i.urlImg, i.altUrl, i.text, i.logo)(class="project--white-bg")
+          .with-slider-simple__slider-nav
+            +slider-nav(class="with-slider-simple__slider-nav-btn slider-nav--white-bg")
+            .swiper-scrollbar

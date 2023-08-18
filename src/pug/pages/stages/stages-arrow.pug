@@ -1,0 +1,25 @@
+-
+  stagesArrow = [
+    {urlImg: "assets/images/stages-arrow/1.svg", title: "Отбор", time: "2,5 часа"},
+    {urlImg: "assets/images/stages-arrow/2.svg", title: "Интервью", time: "30 минут"},
+    {urlImg: "assets/images/stages-arrow/3.svg", title: "Обучение в группе", time: "1 месяц"},
+    {urlImg: "assets/images/stages-arrow/4.svg", title: "Индивидуальное обучение", time: "1 месяц"},
+    {urlImg: "assets/images/stages-arrow/5.svg", title: "Подготовка к экзамену", time: "1 месяц"},
+    {urlImg: "assets/images/stages-arrow/6.svg", title: "Испытательный срок", time: "до 3 месяцев"},
+    {urlImg: "assets/images/stages-arrow/7.svg", title: "Ты в команде!", time: ""},
+  ]
+
+section.stages-arrow
+  .site-container-2
+    .stages-arrow__wrapper
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          .stages-arrow__items
+            each item in stagesArrow
+              .stages-arrow__item
+                .stages-arrow__item-img-wrapper
+                  img.stages-arrow__item-img(src=item.urlImg alt="")
+                .stages-arrow__item-title= item.title
+                if item.time
+                  .stages-arrow__item-time= item.time

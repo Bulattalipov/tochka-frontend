@@ -1,0 +1,224 @@
+.main-progress {
+  padding: 16rem 0 20rem;
+  color: var(--color-grayscale-300);
+  background-color: var(--color-grayscale-900);
+
+  @include mq(lg) {
+    padding: 11rem 0 14rem;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  &__wrapper {}
+
+  &__title-wrapper {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+
+    @include mq(lg) {
+      display: flex;
+    }
+  }
+
+  &__title {
+    grid-column: 6 / 20;
+    margin-bottom: 9rem;
+    font: var(--font-heading-3);
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+
+    @include mq("custom", max, 1024) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-right: calc(-1 * var(--content-padding-2));
+      margin-left: calc(-1 * var(--content-padding-2));
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-column: 2 / 15;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include mq(lg) {
+      grid-column: 1 / 16;
+    }
+
+    @include mq("custom", max, 1024) {
+      display: flex;
+      width: 100%;
+      margin-bottom: 3rem;
+      padding-right: calc(1 * var(--content-padding-2));
+      padding-left: calc(1 * var(--content-padding-2));
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @include mq(sm) {
+
+      column-gap: 0.8rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24.7rem;
+    padding: 1.6rem;
+    overflow: hidden;
+    background-color: var(--color-grayscale-800);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(255, 255, 255, 0.20);
+
+    @include mq(lg) {
+      height: 19.7rem;
+    }
+
+    @include mq("custom", max, 1024) {
+      min-width: 21rem;
+      max-width: 21rem;
+      height: 16rem;
+    }
+
+    @include mq(sm) {
+      min-width: 15rem;
+      max-width: 15rem;
+      height: 10rem;
+    }
+
+    @include mq(xs) {
+      min-width: 11rem;
+      max-width: 11rem;
+      height: 7.2rem;
+    }
+
+    &--active {
+      border: 0.1rem solid var(--color-primary-light-blue);
+    }
+
+    &--img-big {
+      padding: 0;
+
+      .main-progress__btn-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // &__btn-img {
+  //   height: 100%;
+  // }
+
+  &__contents {
+    grid-column: 17 / 24;
+
+    @include mq(lg) {
+      grid-column: 17 / 25;
+    }
+
+    @include mq("custom", max, 1024) {
+      padding-right: calc(1 * var(--content-padding-2));
+      padding-left: calc(1 * var(--content-padding-2));
+    }
+  }
+
+  &__content {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+      height: 100%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__content-title {
+    display: inline-block;
+    margin-bottom: 2.7rem;
+    font: var(--font-text-t1-100);
+
+    @include mq(sm) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__content-text {
+    font: var(--font-text-t3);
+
+    a {
+      position: relative;
+      display: inline-block;
+      margin-right: 1.2rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        margin-top: 0.2rem;
+        margin-left: 0.4rem;
+        background-image: url('../images/foreign.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  &__content-img-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding-bottom: 73%;
+    overflow: hidden;
+    border-radius: 2rem;
+
+    @include mq("custom", max, 1024) {
+      width: 90%;
+      padding-bottom: 45%;
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__content-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

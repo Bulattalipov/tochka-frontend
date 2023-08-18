@@ -1,0 +1,43 @@
+@import "../../node_modules/choices.js/src/styles/choices";
+@import "swiper/swiper.scss";
+@import "swiper/swiper-bundle";
+@import "swiper/modules/pagination/pagination.scss";
+
+
+.debug {
+  div:not(.page-content):not(.hystmodal__shadow),
+  ul:not(.debug-grid),
+  li,
+  h1, h2, h3, h4, h5, h6 {
+      outline: 1px dotted red;
+  }
+
+  a,
+  button {
+      outline: 1px dotted green;
+  }
+
+  img {
+      outline: 1px dotted blue;
+  }
+}
+
+.debug-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: 2rem;
+
+  pointer-events: none;
+
+  & > * {
+      background-color: #FF4141;
+      opacity: 0.1;
+  }
+}

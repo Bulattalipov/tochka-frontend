@@ -1,0 +1,9 @@
+mixin user-cards(img)
+  .user-cards__user
+    .user-cards__user-img-wrapper
+      +imgLazy(img)(class="user-cards__user-img")
+    .user-cards__info
+      span.user-cards__info-title
+        | Александр Дворников
+      .user-cards__info-text
+        | Технический директор Bercut

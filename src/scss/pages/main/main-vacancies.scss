@@ -1,0 +1,169 @@
+.main-vacancies {
+  padding: 10rem 0 8rem;
+  background-color: var(--color-grayscale-900);
+
+  &[data-modif="\[\"white\"\]"] {
+    background-color: var(--color-grayscale-200);
+
+    @include mq(lg) {
+      padding: 6rem 0;
+    }
+
+    @include mq(sm) {
+      padding: 6rem 0;
+    }
+
+    .main-vacancies__info {
+      color: var(--color-grayscale-900);
+      background-color: var(--color-grayscale-300);
+
+      &::before {
+        background-image: url('../../assets/images/main-vacancies/circle&pentagon2.svg');
+      }
+    }
+  }
+
+  @include mq(lg) {
+    padding: 6rem 0 4rem;
+  }
+
+  @include mq(sm) {
+    padding: 3rem 0 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+
+    @include mq(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__swiper-wrapper {
+    position: relative;
+    min-width: 0;
+
+    @include mq(sm) {
+      margin: 0 -1rem;
+    }
+  }
+
+  &__swiper {
+
+    @include mq(sm) {
+      padding: 0 1.4rem;
+    }
+  }
+
+  &__swiper-item {
+    position: relative;
+    height: 72rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include mq(lg) {
+      height: 60rem;
+    }
+
+    @include mq(md) {
+      height: 53rem;
+    }
+
+    @include mq(sm) {
+      height: 35rem;
+    }
+
+    @include mq(xs) {
+      height: 25rem;
+    }
+  }
+
+  &__swiper-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  &__swiper-navigation {
+    position: absolute;
+    right: 6rem;
+    bottom: 6.3rem;
+    z-index: 4;
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6.2rem 6rem;
+    overflow: hidden;
+    color: var(--color-grayscale-300);
+    background-color: var(--color-grayscale-800);
+    border-radius: 1rem;
+
+    @include mq(lg) {
+      padding: 4.4rem 2.4rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.4rem 1.4rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 71.5rem;
+      height: 49.7rem;
+      background-image: url('../../assets/images/main-vacancies/circle&pentagon.svg');
+      background-size: cover;
+      content: '';
+
+      @include mq(lg) {
+        width: 45.5rem;
+        height: 32.7rem;
+      }
+
+      @include mq(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__info-title {
+    font: var(--font-heading-3);
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__info-text {
+    margin-top: auto;
+    margin-bottom: 4rem;
+    opacity: 0.5;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__info-link {
+    @include mq(sm) {
+      margin-left: auto;
+    }
+  }
+}

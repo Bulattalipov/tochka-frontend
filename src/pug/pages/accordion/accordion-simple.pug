@@ -1,0 +1,55 @@
+-
+  listSimple = [
+    {text: "Аудит и проектирование магистральных сетей (DWDM, SDH, IP/MPLS, ВОЛС)"},
+    {text: "Строительство опорной сети передачи данных IP Backhaul"},
+    {text: "Построение сети фиксированного доступа (ШПД)"},
+    {text: "Платформа для предоставления услуг (BRAS, DPI, CGNAT, OSS/BSS, Wi-Fi и др.)"},
+    {text: "Система управления и мониторинга"},
+    {text: "Внедрение технологии TR86 в сетях операторов связи"}
+  ]
+
+section.accordion-simple
+  .site-container
+    .accordion-simple__wrapper
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          h2.accordion-simple__title
+            | Мы предлагаем
+          .accordion-simple__items.js-accordions-accordion-simple
+            .accordion-simple__item.js-accordion
+              .accordion-simple__item-box.js-accordion-btn-simple
+                h3.accordion-simple__item-title
+                  | Решения операторского класса
+                +icon-mono("arrow-down-2")(class="accordion-simple__item-arrow" width="19px" height="22px")
+              .accordion-simple__item-list-wrapper.js-accordion-content-simple
+                ul.accordion-simple__item-list
+                  each item in listSimple
+                    li.accordion-simple__item-elem= item.text
+            .accordion-simple__item.js-accordion
+              .accordion-simple__item-box.js-accordion-btn-simple
+                h3.accordion-simple__item-title
+                  | Телекоммуникационные решения
+                +icon-mono("arrow-down-2")(class="accordion-simple__item-arrow" width="19px" height="22px")
+              .accordion-simple__item-list-wrapper.js-accordion-content-simple
+                ul.accordion-simple__item-list
+                  each item in listSimple
+                    li.accordion-simple__item-elem= item.text
+            .accordion-simple__item.js-accordion
+              .accordion-simple__item-box.js-accordion-btn-simple
+                h3.accordion-simple__item-title
+                  | Строительство Дата-Центров
+                +icon-mono("arrow-down-2")(class="accordion-simple__item-arrow" width="19px" height="22px")
+              .accordion-simple__item-list-wrapper.js-accordion-content-simple
+                ul.accordion-simple__item-list
+                  each item in listSimple
+                    li.accordion-simple__item-elem= item.text
+            .accordion-simple__item.js-accordion
+              .accordion-simple__item-box.js-accordion-btn-simple
+                h3.accordion-simple__item-title
+                  | Услуги Дата-Центра
+                +icon-mono("arrow-down-2")(class="accordion-simple__item-arrow" width="19px" height="22px")
+              .accordion-simple__item-list-wrapper.js-accordion-content-simple
+                ul.accordion-simple__item-list
+                  each item in listSimple
+                    li.accordion-simple__item-elem= item.text

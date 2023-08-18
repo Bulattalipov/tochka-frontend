@@ -1,0 +1,26 @@
+.section-inner {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  height: 100%;
+  column-gap: 2rem;
+
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+  }
+
+  &__left {
+    grid-column: span 5;
+
+    @include mq(lg) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right {
+    position: relative;
+    grid-column: span 19;
+    height: 100%;
+  }
+}

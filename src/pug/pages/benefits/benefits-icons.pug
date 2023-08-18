@@ -1,0 +1,27 @@
+-
+  list = [
+    {imgUrl: "assets/images/benefits-icons/1.svg", text: "QA-специалисты по всем видам тестирования"},
+    {imgUrl: "assets/images/benefits-icons/2.svg", text: "Быстрая и простая интеграция тестирования в рабочий процесс"},
+    {imgUrl: "assets/images/benefits-icons/1.svg", text: "Возможность быстрого масштабирования"},
+    {imgUrl: "assets/images/benefits-icons/2.svg", text: "Более 19 лет в сфере обеспечения качества ПО"},
+    {imgUrl: "assets/images/benefits-icons/1.svg", text: "Доступность команды 24/7"},
+    {imgUrl: "assets/images/benefits-icons/2.svg", text: "Абсолютная прозрачность процессов"},
+    {imgUrl: "assets/images/benefits-icons/2.svg", text: "Абсолютная прозрачность процессов"}
+  ]
+
+section.benefits-icons
+  .site-container
+    .benefits-icons__wrapper
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          h2.benefits-icons__title
+            | 7 преимуществ работы c выделенной
+          .benefits-icons__desc
+            p
+              | Уже более 19 лет мы предоставляем квалифицированные услуги обеспечения качества нашим клиентам по всему миру. Мы создаём оптимальную специализированную команду для удовлетворения потребностей вашего бизнеса, обеспечивая при этом высочайшее качество программного обеспечения.
+          ul.benefits-icons__items
+            each i in list
+              li.benefits-icons__item
+                +imgLazy(i.imgUrl, "")(class="benefits-icons__item-img" width="130px" height="130px")
+                .benefits-icons__item-text= i.text

@@ -1,0 +1,62 @@
+.with-cards {
+  padding: 8rem 0 14rem;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 5rem 0;
+  }
+
+  @include mq(lg) {
+    padding: 4rem 0;
+  }
+
+  .section-inner__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: span 16;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem 1.6rem;
+    width: 100%;
+
+    @include mq(sm) {
+      gap: 1.6rem;
+    }
+
+    @include mq(xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .project {
+    max-width: 100%;
+  }
+
+  @include mq(sm) {
+    .project__wrapper {
+      min-height: 16.7rem;
+    }
+  }
+
+
+  &__btn {
+    margin-top: 7rem;
+
+    @include mq(sm) {
+      margin-top: 5rem;
+    }
+
+    @include mq(xs) {
+      margin-top: 3rem;
+      margin-left: auto;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}

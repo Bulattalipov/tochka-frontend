@@ -1,0 +1,82 @@
+.with-text-quote {
+  &__wrapper {
+    padding: 10rem 3.2rem 12rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 2rem;
+
+    @include mq(lg) {
+      padding: 8rem 3.2rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.4rem 1.4rem;
+    }
+  }
+
+  &__title {
+    max-width: 103.5rem;
+    margin-bottom: 11.8rem;
+    font: var(--font-heading-3);
+
+    @include mq(lg) {
+      margin-bottom: 8rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+
+    span {
+      color: var(--color-primary-light-blue);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    max-width: 103.5rem;
+
+    @include mq("custom", max, 1024) {
+      flex-direction: column;
+    }
+  }
+
+  &__quote {
+    position: relative;
+    width: 59.2rem;
+    margin-right: 6.6rem;
+    padding-left: 5.2rem;
+    font: var(--font-text-t2);
+
+    @include mq("custom", max, 1024) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    @include mq(sm) {
+      width: auto;
+      padding-left: 3.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.9rem;
+      height: 2.1rem;
+      background-image: url('../../assets/images/with-text/quotes.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+
+      @include mq(sm) {
+        width: 2.2rem;
+        height: 1.6rem;
+      }
+    }
+
+    span {
+      opacity: 0.6;
+    }
+  }
+}

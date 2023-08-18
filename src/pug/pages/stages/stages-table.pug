@@ -1,0 +1,29 @@
+-
+  stagesList = [
+    {title: "Анализ и проектирование", elemets: ["Тестирование требований", "Тестирование прототипов", "Разработка стратегии тестирования", "Создание тестовой модели"]},
+    {title: "Разработка", elemets: ["Регулярные работы по тестированию", "Автоматизация тестирования", "Регрессионное тестирование", "Контроль качества", "Подготовка документации"]},
+    {title: "Внедрение", elemets: ["Приёмочное тестирование", "Тестирование миграции", "Создание сопроводительной документации"]},
+    {title: "Обслуживание и поддержка", elemets: ["Сопровождение изменений", "Работа с инцидентами", "Функциональный мониторинг IT-систем"]}
+  ]
+
+section.stages-table
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        h2.stages-table__title
+          | Подключимся на любом <br> этапе работы над проектом
+        .stages-table__desc
+          p
+            | Вы сами выбираете, на каком этапе необходимо привлечение специалистов «Точки качества»
+        ul.stages-table__items
+          each i in stagesList
+            li.stages-table__item
+              .stages-table__item-inner
+                .stages-table__item-number
+                h3.stages-table__item-title= i.title
+              .stages-table__item-text
+                | Выполним
+              ul.stages-table__item-list
+                each j in i.elemets
+                  li.stages-table__item-list-item= j

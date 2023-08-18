@@ -1,0 +1,25 @@
+@font-face {
+  font-weight: 400;
+  font-family: FuturaPT;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("FuturaPT"),
+    local("FuturaPT-Book"),
+    local("FuturaPT-Book"),
+    url("../fonts/FuturaPT-Book.woff2") format("woff2"),
+    url("../fonts/FuturaPT-Book.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 450;
+  font-family: FuturaPT;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("FuturaPT"),
+    local("FuturaPT-Medium"),
+    local("FuturaPT-Medium"),
+    url("../fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("../fonts/FuturaPT-Medium.woff") format("woff");
+}

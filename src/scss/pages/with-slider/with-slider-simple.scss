@@ -1,0 +1,154 @@
+.with-slider-simple {
+  position: relative;
+  padding: 14.6rem 0 14rem;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 10rem 0 14rem;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0 14rem;
+  }
+
+  .section-inner__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: -6rem;
+    overflow: hidden;
+
+    @include mq(lg) {
+      margin-right: 0;
+      overflow: visible;
+    }
+  }
+
+  &__title {
+    max-width: 100rem;
+    margin-bottom: 8rem;
+    font: var(--font-heading-3);
+    line-height: 100%;
+
+    @include mq(lg) {
+      margin-bottom: 6rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    min-width: 0;
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      position: relative;
+      height: 0.2rem;
+      background: rgba(14, 16, 20, 0.15);
+    }
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+      background-color: var(--color-primary-light-blue);
+    }
+  }
+
+  &__swiper-wrapper {
+
+    @include mq(md) {
+      margin-right: -10rem;
+    }
+
+    @include mq(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &__swiper {
+    max-width: 51rem;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    overflow: visible;
+
+    @include mq(lg) {
+      max-width: 43rem;
+    }
+
+    @include mq(md) {
+      max-width: 37rem;
+    }
+
+    @include mq(sm) {
+      max-width: 32rem;
+      margin-bottom: 3rem;
+    }
+
+    @include mq(xs) {
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .project {
+      height: 100%;
+
+      @include mq(sm) {
+        max-width: 100%;
+      }
+    }
+
+    .project__wrapper {
+
+      @include mq(lg) {
+        min-height: 20rem;
+      }
+
+      @include mq(sm) {
+        min-height: 17rem;
+      }
+    }
+  }
+
+  &__slider-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 22rem;
+
+    @include mq(lg) {
+      margin-right: 10rem;
+    }
+
+    @include mq(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &__slider-nav-btn {
+    margin-right: 3.2rem;
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 6rem;
+
+    @include mq(lg) {
+      margin-right: 0;
+    }
+
+    @include mq(md) {
+      position: relative;
+      margin-top: 3rem;
+      margin-left: auto;
+    }
+  }
+}

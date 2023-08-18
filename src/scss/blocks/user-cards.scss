@@ -1,0 +1,42 @@
+.user-cards {
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7.3rem;
+    max-width: 7.3rem;
+    height: 7.3rem;
+    margin-right: 2.4rem;
+    overflow: hidden;
+    border-radius: 0.7rem;
+
+    @include mq(sm) {
+      min-width: 5.3rem;
+      max-width: 5.3rem;
+      height: 5.3rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__info-title {
+    display: block;
+    margin-bottom: 0.5rem;
+    font: var(--font-text-t2);
+  }
+
+  &__info-text {
+    font: var(--font-text-t4);
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,158 @@
+.stages-arrow {
+  padding: 14rem 0;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 11rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  .section-inner__left {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  .section-inner__right {
+    grid-column: span 16;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.6rem;
+    row-gap: 5rem;
+
+    @include mq(md) {
+      display: flex;
+      overflow: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    @include mq(md) {
+      margin: 0 calc(-1 * var(--content-padding-2));
+      padding: 0 var(--content-padding-2);
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 19.6rem;
+
+    @include mq(md) {
+      min-width: 21rem;
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    @include mq("custom", min, 991) {
+      &:nth-child(4n+1){
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    @include mq(sm) {
+      min-width: 17rem;
+    }
+
+    @include mq(xs) {
+      min-width: 12rem;
+    }
+
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      top: 5.1rem;
+      left: -13rem;
+      width: 12rem;
+      height: 1.4rem;
+      background-image: url("../images/stages-arrow/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+
+      @include mq(sm) {
+        top: 2.1rem;
+      }
+    }
+  }
+
+  &__item-img-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.6rem;
+    height: 11.6rem;
+    margin-bottom: 1.6rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(sm) {
+      width: 6rem;
+      height: 6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &::after {
+      position: absolute;
+      right: -0.9rem;
+      width: 1rem;
+      height: 100%;
+      background-color: var(--color-grayscale-200);
+      content: '';
+    }
+  }
+
+  &__item-img {
+    width: 6.2rem;
+    height: 6.2rem;
+    object-fit: contain;
+
+    @include mq(sm) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__item-title {
+    font: var(--font-text-t2);
+
+    @include mq(sm) {
+     max-width: 14rem;
+    }
+
+    @include mq(xs) {
+      max-width: 11rem;
+    }
+  }
+
+  &__item-time {
+    display: inline-block;
+    margin-top: 1.6rem;
+    padding: 0.6rem 0.8rem;
+    color: var(--color-primary-medium-blue);
+    font: var(--font-text-t6-up);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background-color: var(--color-grayscale-100);
+    border-radius: 0.2rem;
+  }
+}

@@ -1,0 +1,19 @@
+section.main-company
+    .site-container
+      .main-company__wrapper
+        .section-inner
+          .section-inner__left
+            span.main-company__subtitle
+              | О компании
+          .section-inner__right
+            h2.main-company__title
+              | Команда #[b «Точка качества»]
+              | помогла сотням компаний обеспечить качество программных продуктов
+            .main-company__inner
+              .main-company__img-wrapper
+                +pictureLazy(`main-company/image.jpg`, "Команда")(class = "main-company__img")
+              .main-company__content
+                .main-company__content-text
+                  p Наши клиенты работают в таких сферах как телекоммуникации, финансы, электронная коммерция, логистика, топливная промышленность, здравоохранение, игры и многих других
+                a.button.button--lighter(href="#")
+                  | Больше о нас

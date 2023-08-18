@@ -1,0 +1,221 @@
+.dispatch-form {
+  padding: 14rem 0;
+  color: var(--color-grayscale-300);
+  background-color: var(--color-grayscale-900);
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-grayscale-200);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-grayscale-900) inset;
+    transition: background-color 50000000s ease-in-out 0s;
+  }
+
+  &[data-wrapper="\[\"Y\"\]"] {
+    color: var(--color-grayscale-900);
+    background-color: var(--color-grayscale-200);
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: var(--color-grayscale-900);
+      -webkit-box-shadow: 0 0 0px 1000px var(--color-grayscale-100) inset;
+      transition: background-color 50000000s ease-in-out 0s;
+    }
+
+    .dispatch-form__wrapper {
+      padding: 14rem 3.2rem;
+      overflow: hidden;
+      background-color: var(--color-grayscale-100);
+      border-radius: 1rem;
+
+      @include mq(lg) {
+        padding: 8.4rem 3.2rem;
+      }
+
+      @include mq(sm) {
+        padding: 2.4rem 1.4rem;
+      }
+    }
+
+    .select__text,
+    .choices {
+      color: var(--color-grayscale-900);
+    }
+
+    .choices__inner {
+      border-bottom: 0.1rem solid rgb(14 16 20 / 30%);
+    }
+
+    .choices[data-type*=select-one]::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath d='M12.25 3.36536L7.00158 7.80766L1.75 3.36536' stroke='%230E1014' stroke-width='1.5042'/%3E%3Cpath d='M12.25 7.80762L7.00158 12.2499L1.75 7.80762' stroke='%230E1014' stroke-width='1.5042'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    .input__element {
+      color: var(--color-grayscale-900);
+      border-bottom: 0.1rem solid rgb(14 16 20 / 30%);
+    }
+
+    .input__textarea {
+      & ~ .input__placeholder {
+        background-color: var(--color-grayscale-100);
+      }
+    }
+
+    .button-with-icon {
+      color: var(--color-grayscale-900);
+      border: 0.1rem solid rgb(14 16 20 / 20%);
+    }
+
+    .form-block__form-policy {
+      opacity: 0.5;
+    }
+
+    .form-block__form-file {
+      &:hover {
+        color: var(--color-primary-light-blue);
+      }
+    }
+
+    .form-block__form-file-size {
+      opacity: 0.5;
+    }
+
+    .form-block__form-file {
+      .error {
+        background-color: var(--color-grayscale-200);
+      }
+    }
+  }
+
+  &[data-modif="\[\"white\"\]"] {
+    color: var(--color-grayscale-900);
+    background-color: var(--color-grayscale-200);
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      -webkit-text-fill-color: var(--color-grayscale-900);
+      -webkit-box-shadow: 0 0 0px 1000px var(--color-grayscale-200) inset;
+      transition: background-color 50000000s ease-in-out 0s;
+    }
+
+    .select__text,
+    .choices {
+      color: var(--color-grayscale-900);
+    }
+
+    .choices__inner {
+      border-bottom: 0.1rem solid rgb(14 16 20 / 30%);
+    }
+
+    .choices[data-type*=select-one]::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath d='M12.25 3.36536L7.00158 7.80766L1.75 3.36536' stroke='%230E1014' stroke-width='1.5042'/%3E%3Cpath d='M12.25 7.80762L7.00158 12.2499L1.75 7.80762' stroke='%230E1014' stroke-width='1.5042'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    .input__element {
+      color: var(--color-grayscale-900);
+      border-bottom: 0.1rem solid rgb(14 16 20 / 30%);
+    }
+
+    .input__textarea {
+      & ~ .input__placeholder {
+        background-color: var(--color-grayscale-200);
+      }
+    }
+
+    .button-with-icon {
+      color: var(--color-grayscale-900);
+      border: 0.1rem solid rgb(14 16 20 / 20%);
+    }
+
+    .form-block__form-policy {
+      opacity: 0.5;
+    }
+
+    .form-block__form-file {
+      &:hover {
+        color: var(--color-primary-light-blue);
+      }
+    }
+
+    .form-block__form-file-size {
+      opacity: 0.5;
+    }
+
+    .form-block__form-file {
+      .error {
+        background-color: var(--color-grayscale-200);
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 0 3.2rem;
+
+    @include mq(sm) {
+      padding: 0 1.4rem;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    margin-bottom: 7rem;
+
+    @include mq(lg) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__title {
+    grid-column: span 14;
+    font: var(--font-heading-2);
+
+    @include mq(lg) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__desc {
+    grid-column: span 10;
+    max-width: 36rem;
+    margin-top: 4rem;
+    font: var(--font-text-t2);
+
+    @include mq(lg) {
+      max-width: 70rem;
+      margin-top: 0;
+    }
+  }
+}

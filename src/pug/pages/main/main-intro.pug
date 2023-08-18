@@ -1,0 +1,36 @@
+-
+  numberText = [
+    {number: ">19", text: "Лет опыта в тестировании ПО"},
+    {number: ">800", text: "Опытных Инженеров по качеству ПО"},
+    {number: ">600", text: "Протестированных продуктов"},
+    {number: ">12", text: "областей экспертизы бизнеса"}
+  ]
+
+
+section.main-intro
+  .main-intro__bg
+    .main-intro__bg-icon
+      <svg class="main-intro__bg-icon-svg" width="100%" height="100%" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath class="main-intro__bg-icon-path" id="pentagon" clipPathUnits="objectBoundingBox">
+            <path class="main-intro__bg-icon-path" d="M1 0H0V0.580952H0.166811C0.137957 0.492994 0.116529 0.40257 0.103274 0.310721C0.212109 0.192143 0.345131 0.0941187 0.49478 0.0119048C0.641406 0.0877945 0.774427 0.1874 0.887798 0.310721C0.875017 0.405966 0.856327 0.496354 0.829719 0.580952H1V0Z"/>
+          </clipPath>
+        </defs>
+      </svg>
+    img(class="main-intro__img" src='assets/images/main-intro/bg-img.png' alt="Круг")
+  .site-container-2
+    .main-intro__wrapper
+      h1.main-intro__title
+        | Когда всё работает правильно
+      .main-intro__desc
+        | Услуги тестирования программного обеспечения
+      .main-intro__footer-wrapper
+        .main-intro__footer-line
+        .main-intro__footer.js-main-intro.swiper
+          .swiper-wrapper
+            each i in numberText
+              .main-intro__footer-item.swiper-slide
+                .main-intro__footer-item-box
+                  .main-intro__footer-item-number
+                    span.main-intro__footer-item-number-span= i.number
+                  .main-intro__footer-item-text= i.text

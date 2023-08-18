@@ -1,0 +1,217 @@
+.footer {
+  display: block;
+  padding-top: 8rem;
+  background-color: var(--color-grayscale-900);
+
+  @include mq(md) {
+    padding-top: 4rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    padding-bottom: 5rem;
+
+    @include mq(md) {
+      padding-bottom: 4rem;
+    }
+
+    @include mq(xs) {
+      display: block;
+      padding-bottom: 0.6rem;
+    }
+  }
+
+  &__col {
+    &:first-child {
+      grid-column: span 5;
+
+      @include mq(lg) {
+        grid-column: span 24;
+      }
+
+      @include mq(xs) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: span 6;
+
+      @include mq(lg) {
+        grid-column: span 8;
+      }
+
+      @include mq(md) {
+        grid-column: span 12;
+      }
+
+      @include mq(xs) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: span 7;
+
+      @include mq(lg) {
+        grid-column: span 8;
+      }
+
+      @include mq(md) {
+        grid-column: span 12;
+      }
+
+      @include mq(xs) {
+        display: none;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: span 6;
+
+      @include mq(lg) {
+        grid-column: span 8;
+      }
+    }
+  }
+
+  &__logo {
+    @include mq(lg) {
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__box {
+    margin-top: 6.4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mq(xs) {
+      display: none;
+    }
+  }
+
+  &__box-title {
+    display: block;
+    margin-bottom: 3.2rem;
+    color: var(--color-grayscale-200);
+    font: var(--font-text-t5-up);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.3;
+
+    @include mq(md) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__box-list-item {
+    margin-bottom: 1.8rem;
+    color: var(--color-grayscale-200);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__box-list-link {
+    @include interactive;
+    font: var(--font-text-t5-up);
+    text-transform: uppercase;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12.6rem;
+    padding-top: 3.6rem;
+    color: var(--color-grayscale-100);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+
+    @include mq(md) {
+      margin-top: 5.6rem;
+    }
+
+    @include mq(xs) {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  &__contacts-telephone {
+    @include interactive;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    font: var(--font-text-t2);
+  }
+
+  &__contacts-email {
+    @include interactive;
+    display: inline-block;
+    margin-bottom: 2.4rem;
+    font: var(--font-text-t3);
+  }
+
+  &__contacts-address {
+    max-width: 21.4rem;
+    margin-bottom: 2.4rem;
+    color: var(--color-grayscale-200);
+    font: var(--font-text-t4);
+    opacity: 0.5;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    align-items: start;
+    padding: 3rem 0;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+
+    @include mq(xs) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 2.4rem 0;
+      border-top: none;
+    }
+  }
+
+  &__info-col {
+    display: flex;
+    grid-column: span 5;
+
+    @include mq(lg) {
+      grid-column: span 8;
+    }
+
+    @include mq(xs) {
+      grid-column: span 1;
+    }
+  }
+
+  &__info-law,
+  &__info-link {
+    color: var(--color-grayscale-200);
+    font: var(--font-common-label-3);
+    text-transform: uppercase;
+    opacity: 0.3;
+
+    @include mq(xxs) {
+      font-size: 1rem;
+    }
+  }
+
+  &__info-link {
+    @include interactive;
+
+    @include mq(xs) {
+      margin-left: auto;
+    }
+  }
+}

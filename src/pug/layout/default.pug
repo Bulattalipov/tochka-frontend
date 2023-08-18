@@ -1,0 +1,27 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang data-lang="ru")
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)(style="zoom: 1")
+    .page-wrapper
+      block header
+        include ../parts/header.pug
+        include ../parts/menu.pug
+      block content
+
+      block footer
+        include ../parts/footer.pug
+
+    .modal
+      include ../parts/modals/modal.pug
+
+  block scripts
+    script.
+      const path = 'assets/'
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

@@ -1,0 +1,58 @@
+-
+  listSliderTabs = [
+    {imgUrl: "assets/images/with-slider-tabs/1.jpg", title: "Полный цикл тестирования вашего продукта", text: "Оптимизация трудозатрат. Эффективная расстановка приоритетов. Высокая степень управляемости"},
+    {imgUrl: "assets/images/with-slider-tabs/2.jpg", title: "Полный цикл тестирования вашего продукта", text: "Оптимизация трудозатрат. Эффективная расстановка приоритетов. Высокая степень управляемости"},
+    {imgUrl: "assets/images/with-slider-tabs/3.jpg", title: "Полный цикл тестирования вашего продукта", text: "Оптимизация трудозатрат. Эффективная расстановка приоритетов. Высокая степень управляемости"},
+    {imgUrl: "assets/images/with-slider-tabs/2.jpg", title: "Полный цикл тестирования вашего продукта", text: "Оптимизация трудозатрат. Эффективная расстановка приоритетов. Высокая степень управляемости"},
+    {imgUrl: "assets/images/with-slider-tabs/1.jpg", title: "Полный цикл тестирования вашего продукта", text: "Оптимизация трудозатрат. Эффективная расстановка приоритетов. Высокая степень управляемости"},
+  ]
+
+section.with-slider-tabs
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        .with-slider-tabs__inner.js-tabs-slider
+          .with-slider-tabs__btns
+            .swiper-wrapper
+              .swiper-slide
+                .with-slider-tabs__btn.with-slider-tabs__btn--active
+                  span.default-text
+                    | Другие виды тестирования
+                  span.second-text
+                    | Другие услуги
+              .swiper-slide
+                .with-slider-tabs__btn
+                  | Материалы по теме
+          .with-slider-tabs__contents
+            .swiper-wrapper
+              .swiper-slide.with-slider-tabs__contents-slide
+                .with-slider-tabs__slider.js-slider-wrapper
+                  .with-slider-tabs__swiper-wrapper
+                    .with-slider-tabs__swiper.swiper
+                      ul.swiper-wrapper
+                        each item in listSliderTabs
+                          li.swiper-slide
+                            .with-slider-tabs__slider-item
+                              +imgLazy(item.imgUrl)(class="with-slider-tabs__slider-item-img")
+                              +icon-multi("button-with-arrow")(class="with-slider-tabs__slider-item-icon" width="33px" height="33px")
+                              a.with-slider-tabs__slider-item-title(href="#")= item.title
+                              .with-slider-tabs__slider-item-text= item.text
+                    .with-slider-tabs__slider-nav
+                      +slider-nav(class="with-slider-tabs__slider-nav-btn slider-nav--white-bg")
+                      .swiper-scrollbar
+              .swiper-slide.with-slider-tabs__contents-slide
+                .with-slider-tabs__slider.js-slider-wrapper
+                  .with-slider-tabs__swiper-wrapper
+                    .with-slider-tabs__swiper.swiper
+                      ul.swiper-wrapper
+                        each item in listSliderTabs
+                          li.swiper-slide
+                            .with-slider-tabs__slider-item
+                              +imgLazy(item.imgUrl)(class="with-slider-tabs__slider-item-img")
+                              +icon-multi("button-with-arrow")(class="with-slider-tabs__slider-item-icon" width="33px" height="33px")
+                              a.with-slider-tabs__slider-item-title(href="#")= item.title
+                              .with-slider-tabs__slider-item-text= item.text
+                    .with-slider-tabs__slider-nav
+                      +slider-nav(class="with-slider-tabs__slider-nav-btn slider-nav--white-bg")
+                      .swiper-scrollbar

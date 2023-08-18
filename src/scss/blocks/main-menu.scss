@@ -1,0 +1,157 @@
+.main-menu {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 0;
+  overflow: auto;
+  background-color: var(--color-grayscale-200);
+
+  &.active {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
+    padding-top: 5rem;
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &--additional {
+      padding-top: 1rem;
+    }
+  }
+
+  &__list-item {
+    &.active {
+      .main-menu__list-btn {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__second-list-item-back {}
+
+  &__second-list-item-title {
+    margin: 3rem 0 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  &__second-list-item-back-btn {
+    margin-bottom: 1rem;
+  }
+
+  &__list-item-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list-link {
+    display: block;
+    padding: 1.5rem 0;
+    font: var(--font-text-t5-up);
+    text-transform: uppercase;
+  }
+
+  &__second-list {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__second-list-item {
+    width: 100%;
+  }
+
+  &__second-list-link {
+    color: rgba(14, 16, 20, 0.5);
+    font: var(--font-text-t2);
+  }
+
+  &__list-btn {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+
+  &__second-list-link {
+    display: block;
+    padding: 1rem 0;
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 5;
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    @include mq(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__burger-line {
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--color-grayscale-900);
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(135deg);
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    margin-top: 3.5rem;
+  }
+}
+
+span.main-menu__second-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    position: relative;
+    display: block;
+    width: 9px;
+    height: 10px;
+    background-image: url("../images/two-arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+}

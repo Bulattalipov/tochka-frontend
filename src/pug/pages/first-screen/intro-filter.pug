@@ -1,0 +1,66 @@
+-
+  menuInputs = [
+    {name: "Все индустрии"},
+    {name: "Банки и финансы"},
+    {name: "Госсектор"},
+    {name: "Здравоохранение"},
+    {name: "Информационные технологии"},
+    {name: "Медиа"},
+    {name: "Недвижимость"},
+    {name: "Нефтегаз"},
+    {name: "Ритейл"},
+    {name: "Телеком"},
+    {name: "Импортозамещение"},
+    {name: "Другие"},
+    {name: "Ритейл"},
+    {name: "Телеком"},
+    {name: "Импортозамещение"},
+    {name: "Другие"},
+  ]
+
+  listServices = [
+    {text: "Все"},
+    {text: "Гибкое"},
+    {text: "Интервью"},
+    {text: "Тенденции обеспечения качества"},
+    {text: "Тестирование больших данных"},
+    {text: "Облачное тестирование"},
+    {text: "Миграционное тестирование"},
+    {text: "Блокчейн тестирование"},
+    {text: "CRM-тестирование"},
+    {text: "ERP-тестирование"},
+    {text: "Функциональное тестирование"},
+    {text: "Автоматизация тестирования 1"},
+    {text: "Автоматизация тестирования 2"},
+    {text: "Автоматизация тестирования 3"},
+    {text: "Автоматизация тестирования 4"},
+    {text: "Автоматизация тестирования 5"},
+    {text: "Автоматизация тестирования 6"},
+    {text: "Автоматизация тестирования 7"},
+    {text: "Автоматизация тестирования 8"},
+  ]
+
+section.intro-filter(style="background-image: none")
+  .site-container-2
+    from.intro-filter__wrapper
+      .section-inner
+        .section-inner__left
+          +fixed-menu-inputs("Карьера", menuInputs, false, "fixed-menu--white-bg fixed-menu--dark fixed-menu--sticky js-sticky")
+        .section-inner__right
+          .intro-filter__inner
+            h1.intro-filter__title
+              | Информационные технологии
+            .intro-filter__subtitle
+              | Сервисы по тестированию ПО
+            .intro-filter__select.js-custom-select
+              .intro-filter__select-header
+                span.intro-filter__select-current
+                  | Выбрать Сервисы по тестированию ПО
+                +icon-mono('arrow-down-fatty')(class="intro-filter__select-icon" width="14px" height="14px")
+              ul.intro-filter__list.js-intro-filter(data-count="14")
+                each item, i in listServices
+                  - var activeChecked = i === 0 ? true : false
+                  li.intro-filter__list-item
+                      label.intro-filter__list-item-label
+                        input.visually-hidden(type="checkbox" name="services" checked=activeChecked)
+                        span.intro-filter__list-item-text= item.text

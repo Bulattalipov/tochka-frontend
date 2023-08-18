@@ -1,0 +1,25 @@
+mixin fixed-menu-2(title, arroyLink)
+  .fixed-menu.js-fixed-menu&attributes(attributes)
+    span.fixed-menu__title= title
+    ul.fixed-menu__list
+      each i in arroyLink
+        li.fixed-menu__item
+          .fixed-menu__item-box
+            a.fixed-menu__item-link(href="#" class= i.mod)= i.name
+            +icon-mono("arrow-down-fatty")(class="fixed-menu__item-link-arrow" width="14px" height="14px")
+          .fixed-menu__second-list-wrapper
+            ul.fixed-menu__second-list
+              li.fixed-menu__second-list-item
+                a.fixed-menu__second-list-link(href="#")
+                  | Функциональное
+              li.fixed-menu__second-list-item
+                a.fixed-menu__second-list-link(href="#")
+                  | Интеграционное
+              li.fixed-menu__second-list-item
+                a.fixed-menu__second-list-link(href="#")
+                  | Тестирование безопасности
+              li.fixed-menu__second-list-item
+                a.fixed-menu__second-list-link(href="#")
+                  | Тестирование совместимости
+
+

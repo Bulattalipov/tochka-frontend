@@ -1,0 +1,186 @@
+.with-slider-user {
+  background-color: var(--color-grayscale-200);
+  padding: 14rem 0;
+
+  @include mq(lg) {
+    padding: 10rem 0;
+  }
+
+  @include mq(sm) {
+    padding: 6rem 0;
+  }
+
+  .section-inner__left {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  .section-inner__right {
+    grid-column: span 16;
+    margin-right: -100%;
+    padding-right: 100%;
+    overflow: hidden;
+
+    @include mq(lg) {
+      overflow: visible;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    min-width: 0;
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+      position: relative;
+      height: 0.2rem;
+      background: rgba(14, 16, 20, 0.15);
+    }
+
+    .swiper-scrollbar.swiper-scrollbar-horizontal .swiper-scrollbar-drag {
+      background-color: var(--color-primary-light-blue);
+    }
+  }
+
+  &__swiper {
+    max-width: 100%;
+    margin-bottom: 5rem;
+    margin-left: 0;
+    overflow: visible;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+
+    @include mq(xs) {
+      padding-right: 0;
+    }
+
+    .swiper-slide {
+      height: auto;
+      user-select: none;
+    }
+  }
+
+  &__swiper-item {
+    display: flex;
+    gap: 1.6rem;
+
+    @include mq(md) {
+      height: 100%;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+      padding: 1.4rem;
+      background-color: var(--color-grayscale-100);
+      border-radius: 1rem;
+    }
+  }
+
+  &__swiper-item-content {
+    flex-basis: 63%;
+
+    @include mq(md) {
+      flex-basis: auto;
+    }
+  }
+
+  &__swiper-item-img-wrapper {
+    position: relative;
+    flex-basis: 37%;
+    min-height: 43.8rem;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    @include mq(md) {
+      flex-basis: auto;
+      flex-shrink: 0;
+      order: -1;
+      min-width: 14rem;
+      height: 14rem;
+      min-height: auto;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__swiper-item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__swiper-item-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.8rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(md) {
+      height: 100%;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__swiper-item-content-text {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 5.2rem;
+    font: var(--font-text-t2);
+
+    @include mq(sm) {
+      padding-left: 3.2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2.9rem;
+      height: 2.1rem;
+      background-image: url(../../assets/images/with-text/quotes.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
+
+      @include mq(sm) {
+        width: 2.2rem;
+        height: 1.6rem;
+      }
+    }
+  }
+
+  .user-cards__user {
+    margin-top: auto;
+  }
+
+  &__slider-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__slider-nav-btn {
+    margin-right: 3.2rem;
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include mq(md) {
+      position: relative;
+      margin-top: 3rem;
+      margin-left: auto;
+    }
+  }
+}

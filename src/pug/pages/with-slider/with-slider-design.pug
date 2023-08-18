@@ -1,0 +1,41 @@
+-
+  listSlide2 = [
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"},
+    {urlImg: "assets/images/with-slider-design/3.jpg"},
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"},
+    {urlImg: "assets/images/with-slider-design/3.jpg"},
+    {urlImg: "assets/images/with-slider-design/1.jpg"},
+    {urlImg: "assets/images/with-slider-design/2.jpg"}
+  ]
+
+section.with-slider-design
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        h2.with-slider-design__title
+          | Материалы по теме
+        .with-slider-design__slider.js-slider-wrapper
+          .with-slider-design__swiper-wrapper
+            .with-slider-design__swiper.swiper
+              ul.swiper-wrapper
+                each item in listSlide2
+                  li.swiper-slide
+                    .with-slider-design__swiper-item
+                      .with-slider-design__swiper-item-img-wrapper
+                        img.with-slider-design__swiper-item-img(src=item.urlImg alt="")
+                      .with-slider-design__swiper-box
+                        .with-slider-design__swiper-box-type
+                          | Блог
+                        .with-slider-design__swiper-box-date
+                          | 31 марта 2022
+                      a.with-slider-design__swiper-text(href="#")
+                        | Сценарий контроля качества для представления 6 тенденций электронной коммерции в 2021 году
+          .with-slider-design__slider-nav
+            +slider-nav(class="with-slider-design__slider-nav-btn slider-nav--white-bg")
+            .swiper-scrollbar
+        a.with-slider-design__btn.button-with-arrow.button-with-arrow--white-bg(href="#")
+          | Все материалы
+        

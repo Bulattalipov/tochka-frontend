@@ -1,0 +1,57 @@
+-
+  listElems = [
+    {text: "Телеком", imgUrl: "assets/images/benefits-digits/1.svg"},
+    {text: "Здравоохранение и фармацевтика", imgUrl: "assets/images/benefits-digits/2.svg"},
+    {text: "Электронная коммерция", imgUrl: "assets/images/benefits-digits/3.svg"},
+    {text: "B2G-системы", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Страхование", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Системная интеграция", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Топливная промышленность", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "SaaS", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Банки и финансы", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Логистика", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Юриспруденция", imgUrl: "assets/images/benefits-digits/4.svg"},
+    {text: "Игровая индустрия", imgUrl: "assets/images/benefits-digits/5.svg"}
+  ]
+mixin with-text-simple-other
+  section.with-text-simple&attributes(attributes)
+    .site-container
+      .with-text-simple__wrapper
+        .section-inner
+          .section-inner__left
+          .section-inner__right
+            .with-text-simple__inner
+              h2
+                | Объём проекта
+              p
+                | В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И.Р. Гальперин определяет текст следующим образом:
+              ul
+                li
+                  | Подготовка к CTF-соревнованиям
+                li
+                  | Повышение квалификации
+                li
+                  | Пентесты системы
+              h3
+                | Подзаголовок
+              ol
+                li
+                  | Подготовка к CTF-соревнованиям
+                li
+                  | Повышение квалификации
+                li
+                  | Пентесты системы
+              h3
+                | Подзаголовок
+              p
+                | Мы проводим тестирование настольных, мобильных и веб-приложений с учётом их специфики и требований заказчика.
+            ul.benefits-digits__items.js-hide-box
+              each i in listElems
+                li.benefits-digits__item
+                  .benefits-digits__item-text= i.text
+                  +imgLazy(i.imgUrl, "Иконка")(class="benefits-digits__item-img")
+              button.benefits-digits__btn.button-with-arrow.button-with-arrow--white-bg.js-hide-btn(type="button")
+                span.default-label
+                  | Показать ещё
+                span.active-label
+                  | скрыть

@@ -1,0 +1,141 @@
+mixin form-block(form1, form2, form3)
+  if form1
+    .form-block__form-wrapper
+      form.form-block__form(active="/" data-need-validation="")
+        ul.form-block__form-inputs
+          li.select.js-validation-wrapper
+            select.select__elem.js-choice-select(data-parsley-required name="select")
+              option(value="")
+                | Тема обращения
+              option(value="Я потенциальный клиент")
+                | Я потенциальный клиент
+              option(value="Предлагаю партнёрство")
+                | Предлагаю партнёрство
+              option(value="Реклама / СМИ")
+                | Реклама / СМИ
+              option(value="Вопрос по работе сайта")
+                | Вопрос по работе сайта
+            span.select__text
+              | Тема обращения
+          li.form-block__form-col
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Имя" name="name" data-parsley-maxlength='255' data-parsley-fio data-parsley-one-space required)
+            span.input__placeholder
+              | ФИО
+          li.input.js-validation-wrapper
+            input.input__element(class="" type="text" placeholder="Телефон" name="telephon" data-parsley-minlength="11" data-parsley-phone2 data-parsley-maxlength='25' data-parsley-required)
+            span.input__placeholder
+              | Телефон
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Компания" name="company" data-parsley-maxlength='255')
+            span.input__placeholder
+              | Компания
+          li.input.js-validation-wrapper
+            input.input__element(type="email" placeholder="Почта" name="email" data-parsley-last-element data-parsley-maxlength='255' data-parsley-email data-parsley-required)
+            span.input__placeholder
+              | Почта
+          li.input.textarea.input--long.js-validation-wrapper
+            textarea.input__element.input__textarea(type="text" placeholder="Компания" name="message" data-parsley-maxlength='4000' contenteditable)
+            span.input__placeholder
+              | Ваше сообщение
+        .form-block__form-box
+          .form-block__form-box-wrapper
+            button.form-block__form-button.button.button--lighter(type="submit")
+              | Отправить
+            p.form-block__form-policy
+              | Нажимая кнопку вы даёте согласие на обработку ваших персональных данных и соглашаетесь c
+              a.form-block__form-policy-link(href="#")
+                | политикой конфиденциальности
+          .form-block__form-file-wrapper
+            label.form-block__form-file.button-with-icon.js-validation-wrapper
+              +icon-mono("clip")(width="24px" height="24px")
+              input.visually-hidden(type="file" name="file" data-parsley-max-file-size="5" accept=".jpg, .jpeg, .png, .svg, .pptx, .pdf, .doc, .docx, .ppt, .odt," data-parsley-file-type="")
+              span.button-with-icon__text
+                | Прикрепить файл
+            .form-block__form-file-size
+              | Максимальный размер файла 5 МБ
+  if form2
+    .form-block__form-wrapper
+      form.form-block__form(active="/" data-need-validation="")
+        ul.form-block__form-inputs
+          li.select.js-validation-wrapper
+            select.select__elem.js-choice-select(data-parsley-required name="select")
+              option(value="")
+                | Вакансия
+              option(value="Тема обращения 2")
+                | Cтажёр-разработчик автоматизированных тестов 1
+              option(value="Тема обращения 3")
+                | Cтажёр-разработчик автоматизированных тестов 2
+              option(value="Тема обращения 4")
+                | Cтажёр-разработчик автоматизированных тестов 3
+              option(value="Тема обращения 5")
+                | Cтажёр-разработчик автоматизированных тестов 4
+              option(value="Тема обращения 6")
+                | Cтажёр-разработчик автоматизированных тестов 5
+            span.select__text
+              | Вакансия
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Имя" name="name" data-parsley-maxlength='255' required)
+            span.input__placeholder
+              | Имя
+          li.input.js-validation-wrapper
+            input.input__element(class="js-date-input" type="text" placeholder="Дата рождения" name="data" required data-parsley-date)
+            span.input__placeholder
+              | Дата рождения
+          li.input.js-validation-wrapper
+            input.input__element(type="email" placeholder="Почта" name="email" data-parsley-maxlength='255' data-parsley-required data-parsley-email data-parsley-last-element)
+            span.input__placeholder
+              | Почта
+          li.input.js-validation-wrapper
+            input.input__element(class="" type="text" placeholder="Телефон" name="telephon" data-parsley-required data-parsley-phone)
+            span.input__placeholder
+              | Телефон
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Город" name="city" data-parsley-required data-parsley-city)
+            span.input__placeholder
+              | Город
+          li.input.input--long.js-validation-wrapper
+            input.input__element(type="text" placeholder="Место работы, комментарий" name="place_work" contenteditable)
+            span.input__placeholder
+              | Место работы, комментарий
+        .form-block__form-box
+          .form-block__form-box-wrapper
+            button.form-block__form-button.button.button--lighter(type="submit")
+              | Отправить
+            p.form-block__form-policy
+              | Нажимая кнопку вы даёте согласие на обработку ваших персональных данных и соглашаетесь c
+              a.form-block__form-policy-link(href="#")
+                | политикой конфиденциальности
+          .form-block__form-file-wrapper
+            label.form-block__form-file.button-with-icon.js-validation-wrapper
+              +icon-mono("clip")(width="24px" height="24px")
+              span.button-with-icon__text
+                | Прикрепить файл
+              input.visually-hidden(type="file" name="file" accept=".doc, .docx, .pdf, .odt" data-parsley-max-file-size="15" data-parsley-file-type="")
+            .form-block__form-file-size
+              | Форматы: doc, docx, pdf и odt
+
+  if form3
+    .form-block__form-wrapper
+      form.form-block__form(active="/" data-need-validation="")
+        ul.form-block__form-inputs
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Имя" name="name" data-parsley-maxlength='255' data-parsley-fio data-parsley-one-space required)
+            span.input__placeholder
+              | ФИО
+          li.input.js-validation-wrapper
+            input.input__element(type="text" placeholder="Компания" name="company" data-parsley-maxlength='255')
+            span.input__placeholder
+              | Компания
+          li.input.js-validation-wrapper
+            input.input__element(type="email" placeholder="Почта" name="email" data-parsley-last-element data-parsley-maxlength='255' data-parsley-email data-parsley-required)
+            span.input__placeholder
+              | Почта
+        .form-block__form-box
+          .form-block__form-box-wrapper
+            button.form-block__form-button.button.button--lighter(type="submit")
+              | Отправить
+            p.form-block__form-policy
+              | Нажимая кнопку вы даёте согласие на обработку ваших персональных данных и соглашаетесь c
+              a.form-block__form-policy-link(href="#")
+                | политикой конфиденциальности

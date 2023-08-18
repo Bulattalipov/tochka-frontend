@@ -1,0 +1,187 @@
+.contacts {
+  padding: 16rem 0 13rem;
+  background-color: var(--color-grayscale-200);
+
+  @include mq(lg) {
+    padding: 13rem 0 10rem;
+  }
+
+  @include mq(sm) {
+    padding: 8rem 0 6rem;
+  }
+
+  &__wrapper {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    &.active {
+      height: 100%;
+      overflow: visible;
+      visibility: visible;
+    }
+  }
+
+  .fixed-menu {
+    margin-top: 3rem;
+
+    @include mq(lg) {
+      display: block;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+  .fixed-menu__list {
+
+    @include mq(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 2rem;
+    }
+  }
+
+  .fixed-menu__title {
+    @include mq(sm) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .fixed-menu__item {
+
+    @include mq(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .section-inner__right {
+    grid-column: span 16;
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    font: var(--font-heading-2);
+    letter-spacing: -0.02em;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.2rem;
+    padding: 3rem 2.8rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(lg) {
+      justify-content: space-between;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.6rem;
+      padding: 1.4rem;
+    }
+
+    @include mq("custom", max, 640) {
+      flex-direction: column;
+    }
+  }
+
+  &__address {
+    margin-right: 21rem;
+
+    @include mq(lg) {
+      margin-right: 6rem;
+    }
+
+    @include mq("custom", max, 640) {
+      margin-right: 0;
+      padding-bottom: 2.4rem;
+      border-bottom: 0.1rem solid rgb(0 0 0 / 5%);
+    }
+  }
+
+  &__address-box {
+    max-width: 42rem;
+    margin-bottom: 3.7rem;
+
+    @include mq("custom", max, 640) {
+      max-width: 100%;
+      margin-bottom: 2.4rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__address-box-title {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--color-primary-light-blue);
+    font: var(--font-text-t6-up);
+    text-transform: uppercase;
+  }
+
+  &__address-box-text {
+    font: var(--font-text-t3);
+  }
+
+  &__contacts {
+    width: 36rem;
+
+    @include mq(lg) {
+      width: 30rem;
+    }
+
+    @include mq("custom", max, 640) {
+      width: auto;
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__contacts-box {
+    margin-bottom: 2.9rem;
+
+    @include mq("custom", max, 640) {
+      margin-bottom: 2.4rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts-box-telephone {
+    @include interactive;
+    display: block;
+    margin-bottom: 0.7rem;
+    font: var(--font-text-t1-100);
+  }
+
+  &__contacts-box-email {
+    @include interactive;
+    display: block;
+    font: var(--font-text-t3);
+  }
+
+  .socials__item {
+    border: 0.1rem solid rgb(14 16 20 / 20%);
+  }
+
+  &__map {
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  &__map-element {
+    height: 51.5rem;
+
+    @include mq(sm) {
+      height: 30rem;
+    }
+  }
+}

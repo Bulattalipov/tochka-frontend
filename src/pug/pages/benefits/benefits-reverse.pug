@@ -1,0 +1,47 @@
+-
+  benefitsReverseList = [
+    {
+      imgUrl: "assets/images/benefits-reverse/1.svg",
+      title: "Задаем высокие стандарты и следуем им",
+      text1: "Мы требовательны к своей работе и её результатам. Для нас важно добиваться поставленных целей, даже если это требует дополнительных усилий.",
+      text2: "Нам не страшно говорить о проблемах, а также признавать свои ошибки, ведь мы стремимся не допускать их повторения."
+    },
+    {
+      imgUrl: "assets/images/benefits-reverse/2.svg",
+      title: "Вкладываем душу",
+      text1: "Обеспечение качества — основная цель для нас.",
+      text2: "Мы эмоционально вовлечены в процесс, потому что любим свою работу. Нашa команда всегда находится в поисках вдохновения, чтобы продолжать выполнять поставленные задачи на отлично."
+    },
+    {
+      imgUrl: "assets/images/benefits-reverse/3.svg",
+      title: "Развиваемся и развиваем",
+      text1: "Мы непрерывно углубляем свою экспертизу, анализируем накопленный опыт и с азартом берёмся за сложные задачи.",
+      text2: "В нашей команде поддерживают инициативы, а также предоставляют возможности для развития новых профессиональных навыков."
+    },
+    {
+      imgUrl: "assets/images/benefits-reverse/4.svg",
+      title: "Вместе работаем, вместе отдыхаем",
+      text1: "Мы не только коллеги, но и друзья. Поэтому выигрываем проекты вместе и разбиваем палаточный лагерь тоже вместе.",
+      text2: "Мы доверяем друг другу, поэтому нам не страшно на сложных переговорах и в одной байдарке по бурной реке."
+    }
+  ]
+
+section.benefits-reverse
+  .site-container-2
+    .benefits-reverse__wrapper
+      .section-inner
+        .section-inner__left
+        .section-inner__right
+          h2.benefits-reverse__title
+            | Заголовок
+          .benefits-reverse__items.js-accordions-benefits
+            each item in benefitsReverseList
+              .benefits-reverse__item.js-accordion
+                .benefits-reverse__item-img-wrapper
+                  +imgLazy(item.imgUrl)(class="benefits-reverse__item-img")
+                .benefits-reverse__item-info
+                  h3.benefits-reverse__item-info-title.js-accordion-btn= item.title
+                  .benefits-reverse__item-info-desc-wrapper.js-accordion-content
+                    .benefits-reverse__item-info-desc
+                      p= item.text1
+                      p= item.text2

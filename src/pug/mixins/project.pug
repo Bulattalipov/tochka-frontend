@@ -1,0 +1,14 @@
+mixin project(urlImg, altImg, text, logoList)
+  .project&attributes(attributes)
+    .project__wrapper
+      +imgLazy(urlImg, altImg)(class="project__img")
+
+      if logoList
+        ul.project__list
+          li.project__list-item
+            img.project__list-item-img(src="assets/images/main-projects/logo.svg" alt="logo")
+
+      .project__text
+        | Клиент: крупный поставщик товаров для офиса и бизнеса
+    .project__info
+      a.project__info-text(href="#")= text

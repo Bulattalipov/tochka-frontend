@@ -1,0 +1,22 @@
+-
+  list = [
+    {title: "Консалтинг", imgUrl: "assets/images/enumeration/img1.png", text: "Поможем улучшить или выстроить c нуля процесс обеспечения качества в вашей компании"},
+    {title: "Выделенная команда тестирования", imgUrl: "assets/images/enumeration/img2.png", text: "Соберём команду тестировщиков и передадим под ваше руководство"},
+    {title: "Полный цикл тестирования", imgUrl: "assets/images/enumeration/img3.png", text: "Проверим ваш сайт, мобильное приложение или другое ПО по всем параметрам, всеми видами тестов"},
+    {title: "Тестирование мобильных приложений", imgUrl: "assets/images/enumeration/img4.png", text: "Убедимся, что ваше приложение удобно для пользователей и работает корректно на любом мобильном устройстве"},
+    {title: "Тестирование веб-приложений", imgUrl: "assets/images/enumeration/img5.png", text: "Проверим ваше веб-приложение или сайт на соответствие общепринятым стандартам и ожиданиям пользователей"},
+  ]
+
+main.page-main.main
+  include main-intro.pug
+  include main-help.pug
+  +enumeration(list, false, "Наши услуги тестирования продуктов", true, true)
+  include main-shield.pug
+  include main-company.pug
+  include main-projects.pug
+  +slider-desc(true, false)
+  include main-infinity-slider.pug
+  include main-progress.pug
+  include main-blogs.pug
+  +dispatch-form
+  +main-vacancies

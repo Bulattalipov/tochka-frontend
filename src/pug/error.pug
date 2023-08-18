@@ -1,0 +1,9 @@
+extends layout/default.pug
+
+block variables
+	- const bodyClass = "body page-home body--dark-bg"
+	- const pageTitle = "404 страница"
+	- const siteLang = "ru"
+
+block content
+	include pages/error/main.pug

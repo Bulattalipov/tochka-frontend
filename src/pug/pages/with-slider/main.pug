@@ -1,0 +1,11 @@
+main.page-main.main
+  include ../first-screen/intro-4.pug
+  +with-slider()
+  +with-slider(true)
+  +with-slider()(data-modif="\[\"grey\"\]")
+  include with-slider-simple.pug
+  include with-slider-tabs.pug
+  include with-slider-design.pug
+  include with-slider-user.pug
+  +slider-desc(false, true)
+  +main-vacancies(data-modif="\[\"white\"\]" data-non-fixed="\[\"menu\"\]")

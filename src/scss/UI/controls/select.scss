@@ -1,0 +1,204 @@
+.select {
+  position: relative;
+  grid-column: span 8;
+
+  &.is-active {
+    .select__text {
+      top: 0;
+      font-size: 1.2rem;
+      transform: translate(0);
+    }
+
+    .choices__list--single {
+      .choices__item {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &.is-error {
+    .choices__inner {
+      border-bottom: 0.1rem solid #DB3131;
+    }
+
+    .error__text {
+      display: block;
+      color: #DB3131;
+      font: var(--font-text-t6);
+    }
+  }
+
+  .error {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+  }
+
+  &__elem {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__text {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    padding-right: 3.5rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-common-label-1);
+    text-transform: uppercase;
+    transform: translateY(1.85rem);
+    transition: transform .3s ease, font-size .3s ease, color .3s ease;
+    pointer-events: none;
+
+    @include mq(sm) {
+      font: var(--font-common-label-2);
+    }
+  }
+}
+
+.choices[data-type*=select-one] {
+
+  &::after {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath d='M14.501 2.9231L8.50278 8.00002L2.50098 2.9231' stroke='%23EAE9F3' stroke-width='1.71909'/%3E%3Cpath d='M14.501 8L8.50278 13.0769L2.50098 8' stroke='%23EAE9F3' stroke-width='1.71909'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: cover;
+    border: none;
+    top: 45%;
+  }
+
+  &:hover {
+
+    &::after {}
+  }
+
+  &:focus {
+    outline: none;
+
+    &.focus-visible {
+      outline: 1px solid red;
+    }
+  }
+
+  &.is-open {
+    &::after {
+      margin-top: 0;
+      border: none;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.choices {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  overflow: visible;
+  color: var(--color-grayscale-300);
+
+  .choices__list--single .choices__item {
+    opacity: 0;
+  }
+
+  &.is-disabled {
+
+    .choices__inner,
+    .choices__input {
+      background-color: transparent;
+      opacity: 0.3;
+    }
+
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath d='M14.0005 2.9231L8.00229 8.00002L2.00049 2.9231' stroke='%23EAE9F3' stroke-opacity='0.3' stroke-width='1.71909'/%3E%3Cpath d='M14.0005 8L8.00229 13.0769L2.00049 8' stroke='%23EAE9F3' stroke-opacity='0.3' stroke-width='1.71909'/%3E%3C/g%3E%3C/svg%3E ");
+    }
+
+    &~.dispatch-form__select-label {
+      color: rgba(234, 233, 243, 0.3);
+    }
+  }
+}
+
+.choices__inner {
+  min-height: 5rem;
+  padding: 1.5rem 5.6rem 1.85rem 0;
+  font: var(--font-common-placeholder);
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+}
+
+.choices__list {
+  z-index: 20;
+}
+
+.choices__list--dropdown {
+  .choices__list {
+    overflow-y: auto;
+
+    scrollbar-width: 1rem;
+    scrollbar-color: #D0D0D0 transparent;
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 1rem;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #D0D0D0;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.choices__list--dropdown .choices__list,
+.choices__list[aria-expanded] .choices__list {
+  max-height: 17rem;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__list.choices__list--dropdown {
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  margin-top: 0.6rem;
+  color: #000;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  position: relative;
+  padding: 1rem 2rem;
+  font: var(--font-common-placeholder);
+  word-break: break-word;
+
+  &:hover {
+    background-color: rgba(113, 113, 239, 0.3);
+  }
+}
+
+.choices__list--single.choices__item {
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+@include mq("custom", min, 640) {
+  .choices__list--dropdown .choices__item--selectable,
+  .choices__list[aria-expanded] .choices__item--selectable {
+    padding: 1rem 2rem;
+  }
+}
+

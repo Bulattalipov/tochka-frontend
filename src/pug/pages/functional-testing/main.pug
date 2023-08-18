@@ -1,0 +1,18 @@
+main.page-main.main
+  .news-container(data-sticky-container)
+    include ../first-screen/intro-4.pug
+    .page-news
+      //- include ../first-screen/intro-filter.pug
+      include ../with-cards/with-cards.pug
+  //- +main-vacancies(data-modif="\[\"white\"\]" data-non-fixed="\[\"menu\"\]")
+  //- include ../with-form/with-form-subscription.pug
+  +dispatch-form(data-modif="\[\"white\"\]" data-non-fixed="\[\"menu\"\]")
+
+
+  //- include ../first-screen/intro-2.pug
+  //- include ../with-cards/with-cards.pug
+  //- include ../with-text/with-text-number.pug
+  //- include ../with-text/with-text-ordinary.pug
+  //- include ../with-form/with-form-subscription.pug
+  //- +main-vacancies(data-modif="\[\"white\"\]" data-non-fixed="\[\"menu\"\]")
+  //- +dispatch-form(data-modif="\[\"white\"\]" data-non-fixed="\[\"menu\"\]")

@@ -1,0 +1,22 @@
+-
+  listCards = [
+    {urlImg: "assets/images/with-cards/1.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: false},
+    {urlImg: "assets/images/with-cards/2.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/3.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: true},
+    {urlImg: "assets/images/with-cards/4.jpg", altUrl: "", text: "Консалтинг в сфере обеспечения качества", logo: false},
+    {urlImg: "assets/images/with-cards/5.jpg", altUrl: "", text: "Повышение надёжности корпоративной ERP-системы путём обновления версии СУБД", logo: false},
+    {urlImg: "assets/images/with-cards/6.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/7.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true},
+    {urlImg: "assets/images/with-cards/8.jpg", altUrl: "", text: "Тестирование программных продуктов в сфере телекоммуникаций", logo: true}
+  ]
+
+section.with-cards
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        .with-cards__wrapper
+          each i in listCards
+            +project(i.urlImg, i.altUrl, i.text, i.logo)(class="project--white-bg")
+        button.with-cards__btn.button-with-arrow.button-with-arrow--white-bg(type="button")
+          | Показать ещё

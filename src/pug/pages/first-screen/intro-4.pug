@@ -1,0 +1,17 @@
+-
+  menu = [
+    {name: "Вакансии", mod: "fixed-menu__item-link--active"},
+    {name: "Развитие и карьерный рост", mod: ""},
+    {name: "Ценности", mod: ""}
+  ]
+
+section.intro.intro--white-bg(style="background-image: none" data-not-title=["not-title"])
+  .site-container-2
+    .intro__wrapper
+      .section-inner
+        .section-inner__left
+          +fixed-menu("Карьера", menu, false, "fixed-menu--white-bg fixed-menu--dark fixed-menu--info-block", true)
+        .section-inner__right
+          .intro__inner
+            h1.intro__title
+              | Вакансии

@@ -1,0 +1,86 @@
+-
+  nav = [
+    {name: "Компания", link: "#"},
+    {name: "Инфоцентр", link: "#"},
+    {name: "Карьера", link: "#"},
+    {name: "Контакты", link: "#"}
+  ]
+
+  list_second_1 = [
+    {name: "Автоматизация тестирования", link: "#"},
+    {name: "Аутсорсинг тестирования", link: "#"},
+    {name: "Выделенная команда тестирования", link: "#"},
+    {name: "QA для индустрий", link: "#"},
+    {name: "Решения по качеству", link: "#"},
+    {name: "Виды тестирования", link: "#"}
+  ]
+header.header
+  .site-container
+    .header__wrapper
+      a.header__logo.header__logo-dark-bg.logo(href="/")
+        img.logo__img(src="assets/images/logo.svg" alt="Логотип компании")
+      a.header__logo.header__logo-white-bg.logo(href="/")
+        img.logo__img(src="assets/images/logo--dark.svg" alt="Логотип компании")
+      ul.header__list
+        li.header__list-item
+          .header__list-link-inner
+            a.header__list-link(href="#")
+              | Услуги
+            .header__list-second-wrapper
+              ul.header__list-second
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | Автоматизация тестирования
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | Аутсорсинг тестирования
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | Выделенная команда тестирования
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | QA для индустрий
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | Решения по качеству
+                  ul.header__list-three-list
+                    each j in list_second_1
+                      li.header__list-three-item
+                        a.header__list-three-link(href=j.link)= j.name
+                li.header__list-second-item
+                  a.header__list-second-link(href="#")
+                    | Виды тестирования
+                  ul.header__list-three-list
+                    each j in list_second_1
+                      li.header__list-three-item
+                        a.header__list-three-link(href=j.link)= j.name
+          span.header__list-text
+            | 06
+        li.header__list-item
+          .header__list-link-inner
+            a.header__list-link(href="#")
+              | Портфолио
+            .header__list-second-wrapper
+              ul.header__list-second
+                each j in list_second_1
+                  li.header__list-second-item
+                    a.header__list-second-link(href=j.link)= j.name
+          span.header__list-text
+            | 52
+      nav.nav.header__nav
+        ul.nav__list
+          each i in nav
+            li.nav__list-item
+              a.nav__list-link(href=i.link)= i.name
+              .header__list-second-wrapper
+                ul.header__list-second
+                  each j in list_second_1
+                    li.header__list-second-item
+                      a.header__list-second-link(href=j.link)= j.name
+      .header__btn-row
+        button.header__btn.button.button--whiteBg(data-path="modal-callback")
+          | Связаться
+      .header__burger
+        span.header__burger-line
+        span.header__burger-line
+

@@ -1,0 +1,105 @@
+/* stylelint-disable selector-class-pattern */
+.input {
+  position: relative;
+
+  &--long {
+    grid-column: span 24;
+  }
+
+  &.is-error {
+    .input__element {
+      border-bottom: 0.1rem solid #DB3131;
+    }
+
+    .error__text {
+      display: block;
+      color: #DB3131;
+      font: var(--font-text-t6);
+    }
+  }
+
+  .error {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    font: var(--font-common-label-3);
+    text-transform: uppercase;
+    transform: translateY(0);
+    transition: var(--transition);
+    pointer-events: none;
+  }
+
+  &__element {
+    height: 50px;
+    min-height: 5rem;
+    padding: 1.6rem 0 1.2rem;
+    color: var(--color-grayscale-300);
+    font: var(--font-common-placeholder);
+    border-bottom: 0.1rem solid rgb(255 255 255 / 30%);
+    resize: none;
+
+    @include placeholder() {
+      color: transparent;
+      font-size: 0;
+      opacity: 0;
+    }
+
+    &:placeholder-shown~.input__placeholder {
+      font: var(--font-common-label-1);
+      transform: translateY(2.2rem);
+
+      @include mq(sm) {
+        font: var(--font-common-label-2);
+      }
+    }
+
+    &:focus {
+      &~.input__placeholder {
+        font: var(--font-common-label-3);
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__textarea {
+    box-sizing: border-box;
+    height: 4rem;
+    min-height: 4rem;
+    margin-top: 0.7rem;
+    padding-top: 0;
+    overflow-y: auto;
+    line-height: 1.3;
+    resize: vertical;
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #3d3d3d;
+      border-radius: 1rem;
+    }
+
+    &~.input__placeholder {
+      width: 100%;
+      padding-bottom: 0.6rem;
+      background-color: var(--color-grayscale-900);
+    }
+  }
+
+  &.textarea {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}

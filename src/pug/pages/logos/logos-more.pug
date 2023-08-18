@@ -1,0 +1,21 @@
+section.logos-more
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right.js-hide-wrapper
+        h2.logos-more__title
+          | Награды и признания
+        .logos-more__desc
+          p
+            | Мы делаем все возможное для осуществления плавной интеграции с вашей командой и построения максимально эффективного взаимодействия на необходимом уровне.
+          p
+            | Принципы взаимодействия сторон и правила составления отчётов варьируются в зависимости от потребностей клиента и специфики проекта. Мы активно используем онлайн-инструменты управления проектами, а также системы отслеживания ошибок, в которых хранится информация, связанная с проведённым тестированием.
+        .logos-more__items.js-hide-box
+          each i in Array.from(Array(7).keys())
+            .logos-more__item
+              +imgLazy(`assets/images/logos/${i}.svg`, "icon")(class="logos-more__item-img")
+        btn.logos-more__btn.button-with-arrow.button-with-arrow--white-bg.js-hide-btn(type="button")
+          span.default-label
+            | Показать ещё
+          span.active-label
+            | скрыть

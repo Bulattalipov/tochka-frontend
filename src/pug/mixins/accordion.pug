@@ -1,0 +1,249 @@
+mixin accordion(accordion1, accordion2)
+  if accordion1
+    section.accordion
+      .site-container-2
+        .accordion__wrapper
+          .section-inner
+            .section-inner__left
+            .section-inner__right
+              h2.accordion__title
+                | Онлайн-курс «Автоматизация тестирования ПО»
+              .accordion__items.js-accordions
+                .accordion__item.js-accordion
+                  .accordion__item-basic
+                    .accordion__item-box
+                      .accordion__item-box-top
+                        h3.accordion__item-box-title
+                          | Маркетолог (обучение)
+                        button.accordion__item-link.button-with-arrow.button-with-arrow--white-bg(data-path="modal-resume")
+                          | Откликнуться
+                      span.accordion__item-box-city
+                        | Москва
+                      ul.accordion__item-tags
+                        li.accordion__item-tag
+                          | Менеджер по маркетингу
+                        li.accordion__item-tag
+                          | Продуктовый маркетинг
+                        li.accordion__item-tag
+                          | Интернет маркетинг
+                        li.accordion__item-tag
+                          | Upper Intermediate
+                        li.accordion__item-tag
+                          | Поиск клиентов
+                    .accordion__item-btn.js-accordion-btn(tabindex="0")
+                      +icon-mono("arrow-down")(class="accordion__item-btn-icon" with="19px" height="22px")
+                  .accordion__item-info-wrapper.js-accordion-content
+                    .accordion__item-info
+                      .accordion__item-info-box
+                        h4.accordion__item-info-title
+                          | Обязанности:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | разработка автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | запуск и анализ результатов автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | настройка и поддержка окружения для запуска автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | взаимодействие с проектной командой.
+                        h4.accordion__item-info-title
+                          | Требования:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | базовые знания любого языка программирования с поддержкой ООП;
+                          li.accordion__item-info-item
+                            | базовые навыки работы со средами программирования (Jetbrains IDEA, Visual Studio, Pycharm и т.п.);
+                          li.accordion__item-info-item
+                            | базовые знания методологий и процесса разработки ПО;
+                          li.accordion__item-info-item
+                            | возможность работать не менее 30 часов в неделю;
+                          li.accordion__item-info-item
+                            | внимательность, критический склад ума, аналитические способности, обучаемость;
+                          li.accordion__item-info-item
+                            | умение работать в команде и ориентация на результат.
+                        h4.accordion__item-info-title
+                          | Мы предлагаем:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | стать частью коллектива, в котором хорошо работать и отдыхать;
+                          li.accordion__item-info-item
+                            | возможность трудоустройства по итогам обучения;
+                          li.accordion__item-info-item
+                            | получение уникальной экспертизы в рамках собственного учебного центра;
+                          li.accordion__item-info-item
+                            | работу на интересных проектах и с известными заказчиками;
+                          li.accordion__item-info-item
+                            | коллектив профессионалов, незабываемую атмосферу и корпоративную культуру;
+                          li.accordion__item-info-item
+                            | офис возле метро и возможность гибкого графика;
+                          li.accordion__item-info-item
+                            | стабильную зарплату и социальный пакет.
+                      button.accordion__item-info-btn.button.button--lighter(data-path="modal-resume" tabindex="-1")
+                        | Откликнуться
+                  .accordion__btn-link-wrapper
+                    button.accordion__btn-link.button.button--lighter(data-path="modal-resume")
+                      | Откликнуться
+                .accordion__item.js-accordion
+                  .accordion__item-basic
+                    .accordion__item-box
+                      .accordion__item-box-top
+                        h3.accordion__item-box-title
+                          | Cтажёр-разработчик автоматизированных тестов
+                        button.accordion__item-link.button-with-arrow.button-with-arrow--white-bg(data-path="modal-resume")
+                          | Откликнуться
+                      span.accordion__item-box-city
+                        | Москва
+                      ul.accordion__item-tags
+                        li.accordion__item-tag
+                          | Менеджер по маркетингу
+                        li.accordion__item-tag
+                          | Продуктовый маркетинг
+                        li.accordion__item-tag
+                          | Интернет маркетинг
+                        li.accordion__item-tag
+                          | Upper Intermediate
+                        li.accordion__item-tag
+                          | Поиск клиентов
+                    .accordion__item-btn.js-accordion-btn(tabindex="0")
+                      +icon-mono("arrow-down")(class="accordion__item-btn-icon" with="19px" height="22px")
+                  .accordion__item-info-wrapper.js-accordion-content
+                    .accordion__item-info
+                      .accordion__item-info-box
+                        h4.accordion__item-info-title
+                          | Обязанности:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | разработка автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | запуск и анализ результатов автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | настройка и поддержка окружения для запуска автоматизированных тестов;
+                          li.accordion__item-info-item
+                            | взаимодействие с проектной командой.
+                        h4.accordion__item-info-title
+                          | Требования:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | базовые знания любого языка программирования с поддержкой ООП;
+                          li.accordion__item-info-item
+                            | базовые навыки работы со средами программирования (Jetbrains IDEA, Visual Studio, Pycharm и т.п.);
+                          li.accordion__item-info-item
+                            | базовые знания методологий и процесса разработки ПО;
+                          li.accordion__item-info-item
+                            | возможность работать не менее 30 часов в неделю;
+                          li.accordion__item-info-item
+                            | внимательность, критический склад ума, аналитические способности, обучаемость;
+                          li.accordion__item-info-item
+                            | умение работать в команде и ориентация на результат.
+                        h4.accordion__item-info-title
+                          | Мы предлагаем:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | стать частью коллектива, в котором хорошо работать и отдыхать;
+                          li.accordion__item-info-item
+                            | возможность трудоустройства по итогам обучения;
+                          li.accordion__item-info-item
+                            | получение уникальной экспертизы в рамках собственного учебного центра;
+                          li.accordion__item-info-item
+                            | работу на интересных проектах и с известными заказчиками;
+                          li.accordion__item-info-item
+                            | коллектив профессионалов, незабываемую атмосферу и корпоративную культуру;
+                          li.accordion__item-info-item
+                            | офис возле метро и возможность гибкого графика;
+                          li.accordion__item-info-item
+                            | стабильную зарплату и социальный пакет.
+                      button.accordion__item-info-btn.button.button--lighter(data-path="modal-resume" tabindex="-1")
+                        | Откликнуться
+                  .accordion__btn-link-wrapper
+                    button.accordion__btn-link.button.button--lighter(data-path="modal-resume")
+                      | Откликнуться
+  if accordion2
+    section.accordion
+      .site-container-2
+        .accordion__wrapper
+          .section-inner
+            .section-inner__left
+            .section-inner__right
+              .accordion__items.js-accordions
+                .accordion__item.js-accordion
+                  .accordion__item-basic
+                    .accordion__item-box
+                      .accordion__item-box-top
+                        h3.accordion__item-box-title
+                          | Обучение в группе (Уровень 1)
+                        button.accordion__item-link.button-with-arrow.button-with-arrow--white-bg(data-path="modal-resume")
+                          | Подать заявку
+                      span.accordion__item-box-city
+                        | Длительность программы: 1 месяц
+                      .accordion__item-text
+                        p
+                          | Цель уровня — ознакомиться с базовыми понятиями тестирования, изучить на практике основы веб-автоматизации и принципы построения проекта по автоматизации.
+                        p
+                          | Обучение проходит в групповом формате с ежедневными воркшопами и консультациями-брейнштормами, разбором принятых в автоматизации
+                    .accordion__item-btn.js-accordion-btn(tabindex="0")
+                      +icon-mono("arrow-down")(class="accordion__item-btn-icon" with="19px" height="22px")
+                  .accordion__item-info-wrapper.js-accordion-content
+                    .accordion__item-info
+                      .accordion__item-info-box
+                        h4.accordion__item-info-title
+                          | Темы первого уровня:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | <b>Тема 1</b> — Основы тестирования и автоматизации тестирования (ключевые термины).
+                          li.accordion__item-info-item
+                            | <b>Тема 2</b>  — Автоматизация тестирования: основные подходы в области веб-автоматизации на примере инструмента Selenium WebDriver.
+                          li.accordion__item-info-item
+                            | <b>Тема 3</b> — Тестовые библиотеки (TestNG/NUnit/pytest/Mocha) и принципы их использования.
+                          li.accordion__item-info-item
+                            | <b>Тема 4</b> — Структура проекта и фреймворка по автоматизации тестирования.
+                          li.accordion__item-info-item
+                            | <b>Тема 5</b> — Шаблоны проектирования в автоматизации.
+                        .accordion__item-info-text
+                          p
+                            | Несмотря на большое количество встреч, основу курса составляет практика. Задания выполняются на одном из объектно-ориентированных языков: Java, C#, JS, Python.
+                      button.accordion__item-info-btn.button.button--lighter(data-path="modal-resume" tabindex="-1")
+                        | Подать заявку
+                  .accordion__btn-link-wrapper
+                    button.accordion__btn-link.button.button--lighter(data-path="modal-resume")
+                      | Подать заявку
+                .accordion__item.js-accordion
+                  .accordion__item-basic
+                    .accordion__item-box
+                      .accordion__item-box-top
+                        h3.accordion__item-box-title
+                          | Обучение в группе (Уровень 1)
+                        button.accordion__item-link.button-with-arrow.button-with-arrow--white-bg(data-path="modal-resume")
+                          | Подать заявку
+                      span.accordion__item-box-city
+                        | Длительность программы: 1 месяц
+                      .accordion__item-text
+                        p
+                          | Цель уровня — ознакомиться с базовыми понятиями тестирования, изучить на практике основы веб-автоматизации и принципы построения проекта по автоматизации.
+                        p
+                          | Обучение проходит в групповом формате с ежедневными воркшопами и консультациями-брейнштормами, разбором принятых в автоматизации подходов и обсуждением возникающих у студентов вопросов.
+                    .accordion__item-btn.js-accordion-btn(tabindex="0")
+                      +icon-mono("arrow-down")(class="accordion__item-btn-icon" with="19px" height="22px")
+                  .accordion__item-info-wrapper.js-accordion-content
+                    .accordion__item-info
+                      .accordion__item-info-box
+                        h4.accordion__item-info-title
+                          | Темы первого уровня:
+                        ul.accordion__item-info-list
+                          li.accordion__item-info-item
+                            | <b>Тема 1</b> — Основы тестирования и автоматизации тестирования (ключевые термины).
+                          li.accordion__item-info-item
+                            | <b>Тема 2</b>  — Автоматизация тестирования: основные подходы в области веб-автоматизации на примере инструмента Selenium WebDriver.
+                          li.accordion__item-info-item
+                            | <b>Тема 3</b> — Тестовые библиотеки (TestNG/NUnit/pytest/Mocha) и принципы их использования.
+                          li.accordion__item-info-item
+                            | <b>Тема 4</b> — Структура проекта и фреймворка по автоматизации тестирования.
+                          li.accordion__item-info-item
+                            | <b>Тема 5</b> — Шаблоны проектирования в автоматизации.
+                        .accordion__item-info-text
+                          p
+                            | Несмотря на большое количество встреч, основу курса составляет практика. Задания выполняются на одном из объектно-ориентированных языков: Java, C#, JS, Python.
+                      button.accordion__item-info-btn.button.button--lighter(data-path="modal-resume" tabindex="-1")
+                        | Подать заявку
+                  .accordion__btn-link-wrapper
+                    button.accordion__btn-link.button.button--lighter(data-path="modal-resume")
+                      | Подать заявку

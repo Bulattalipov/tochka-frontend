@@ -1,0 +1,8 @@
+-
+  icons = ["telegram", "vk", "instagram", "dzen", "linkedin", "twitter"];
+
+mixin socials()
+  .socials&attributes(attributes)
+    each i in icons
+      a.socials__item(href="/")
+        +icon-mono(i)(width="17px" height="16px")

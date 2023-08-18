@@ -1,0 +1,263 @@
+.stages-row {
+
+  &--col {
+    .stages-row__item-inner {
+      display: flex;
+    }
+
+    .stages-row__item-box {
+      max-width: 57.3rem;
+    }
+
+    .stages-row__item-number-wrapper {
+      display: flex;
+    }
+
+    .stages-row__item-number {
+      margin-bottom: 1rem;
+    }
+
+    .stages-row__item-number-wrapper::after {
+      @include mq(xs) {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 10rem 3.2rem;
+    background-color: var(--color-grayscale-100);
+    border-radius: 1rem;
+
+    @include mq(lg) {
+      padding: 6rem 3.2rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.4rem 1.4rem;
+    }
+  }
+
+  .section-inner__right {
+    grid-column: span 16;
+  }
+
+  &__title {
+    margin-bottom: 9rem;
+    font: var(--font-heading-3);
+
+    @include mq(lg) {
+      margin-bottom: 6rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__items {
+    counter-reset: list;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    a {
+      display: inline-block;
+      color: blue;
+
+      @include interactive;
+    }
+
+    @include mq(xs) {
+      display: flex;
+      gap: 1.6rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .stages-row__item-number-wrapper::after {
+        display: none;
+      }
+      .stages-row__item-die::before {
+        display: none;
+      }
+    }
+  }
+
+  &__item-number-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+
+    &::after {
+      width: 0.1rem;
+      height: 100%;
+      margin-left: 2.9rem;
+      border-left: 0.1rem dashed var(--color-grayscale-900);
+      content: '';
+
+      @include mq(sm) {
+        margin-left: 1.7rem;
+      }
+
+      @include mq(xs) {
+        display: none;
+      }
+    }
+  }
+
+  &__item-number {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 4rem;
+    border-radius: 0.5rem;
+
+    @include mq(sm) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    &::before {
+      color: var(--color-grayscale-100);
+      font: var(--font-text-t3-up);
+      content: counter(list) "";
+      counter-increment: list;
+    }
+  }
+
+  &__item-inner {
+    display: grid;
+    grid-column: span 14;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 2rem;
+    padding-top: 2.8rem;
+    border-top: 0.1rem solid #eae9f3;
+
+    @include mq(xs) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      width: 100%;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  &__item-box {
+    grid-column: span 6;
+    max-width: 34rem;
+
+    & > * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 2rem;
+    font: var(--font-heading-5);
+
+    @include mq(xs) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 2rem;
+    font: var(--font-text-t3);
+    opacity: 0.6;
+
+    a {
+      @include interactive;
+    }
+  }
+
+  &__item-subtitle {
+    margin-bottom: 0.8rem;
+    font: var(--font-text-t2);
+  }
+
+  &__item-die {
+    position: relative;
+    grid-column: 8 / 15;
+    padding: 2.8rem;
+    background-color: var(--color-grayscale-200);
+    border-radius: 1rem;
+
+    @include mq(md) {
+      padding: 1.9rem;
+    }
+
+    @include mq(sm) {
+      padding: 1.4rem;
+    }
+
+    @include mq(xs) {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -3.2rem;
+        width: 0.1rem;
+        height: 100%;
+        border-left: 0.1rem dashed var(--color-grayscale-900);
+        content: '';
+      }
+    }
+  }
+
+  &__item-die-title {
+    margin-bottom: 2rem;
+    color: var(--color-primary-light-blue);
+    font: var(--font-text-t6-up);
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__item-die-list-item {
+    position: relative;
+    margin-bottom: 0.8rem;
+    padding-left: 2.4rem;
+    font: var(--font-text-t2);
+
+    @include mq(sm) {
+      padding-left: 2rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.6rem;
+      left: 0;
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-image: url("../../assets/images/stages/pentagon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      content: '';
+
+      @include mq(sm) {
+        top: 0.4rem;
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin dispatch-form()
+  section.dispatch-form&attributes(attributes)
+    .site-container
+      .dispatch-form__wrapper
+        .dispatch-form__inner
+          h2.dispatch-form__title
+            | Оставить заявку
+          .dispatch-form__desc
+            p
+              | Хотите делать качественное ПО? Запросите бесплатную консультацию
+              | заполнив эту форму
+        +form-block(true, false)

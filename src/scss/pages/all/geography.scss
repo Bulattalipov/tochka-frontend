@@ -1,0 +1,110 @@
+.geography {
+  position: relative;
+  height: 69rem;
+  padding: 10rem 0;
+  color: var(--color-grayscale-300);
+  background-color: var(--color-primary-medium-blue);
+
+  @include mq(lg) {
+    padding: 6rem 0;
+  }
+
+  @include mq(sm) {
+    height: 55rem;
+    padding: 2.4rem 0;
+  }
+
+  .site-container-2 {
+    height: 100%;
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    right: -2.5rem;
+    z-index: 1;
+    width: 116.2rem;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mq(lg) {
+      right: auto;
+      left: 40rem;
+    }
+
+    @include mq(sm) {
+      left: 10rem;
+      background-size: contain;
+    }
+
+    @include mq(xs) {
+      left: 0.8rem;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    height: 100%;
+
+    @include mq(lg) {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    @include mq(sm) {
+
+    }
+  }
+
+  &__title {
+    grid-column: span 14;
+    font: var(--font-heading-2);
+
+    @include mq(sm) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 15 / 25;
+    height: 100%;
+
+    @include mq(lg) {
+      justify-content: space-between;
+    }
+  }
+
+  &__box-text {
+    max-width: 43rem;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    font: var(--font-text-t1-100);
+
+    @include mq(xxl) {
+      margin-bottom: 6rem;
+    }
+
+    @include mq(lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__box-btn {
+    display: inline-block;
+
+    @include mq(lg) {
+      margin-left: auto;
+    }
+  }
+}

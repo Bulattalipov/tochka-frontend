@@ -1,0 +1,9 @@
+extends layout/default.pug
+
+block variables
+	- const bodyClass = "body page-home body--white-header"
+	- const pageTitle = "Со слайдером"
+	- const siteLang = "ru"
+
+block content
+	include pages/with-slider/main.pug

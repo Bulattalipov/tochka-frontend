@@ -1,0 +1,39 @@
+mixin with-slider(text)
+  -
+    listImages = [
+      {imgUrl: "assets/images/with-slider/image-1.jpg", altUrl: "image"},
+      {imgUrl: "assets/images/with-slider/image-2.jpg", altUrl: "image"},
+      {imgUrl: "assets/images/with-slider/image-3.jpg", altUrl: "image"},
+      {imgUrl: "assets/images/with-slider/image-2.jpg", altUrl: "image"},
+      {imgUrl: "assets/images/with-slider/image-3.jpg", altUrl: "image"},
+    ]
+
+  section.with-slider&attributes(attributes)
+    .site-container
+      .with-slider__wrapper
+        .section-inner
+          .section-inner__left
+          .section-inner__right
+            h2.with-slider__title
+              | Постоянное развитие <br> команды
+            span.with-slider__subtitle
+              | Наш учебный центр Academy создан <br> для обучения сотрудников
+            .with-slider__desc
+              p
+                | Одним из направлений деятельности компании является постоянное развитие сотрудников. С этой целью был создан внутренний учебный центр – Academy. Учебный центр специализируется на практико-ориентированном обучении в области тестирования. Все преподаватели академии — это действующие сотрудники компании, которые разрабатывают свои курсы, основываясь на реальном опыте работы. Это специалисты, которые прошли тренинг тренеров для более качественного донесения информации слушателям
+            .with-slider__slider.js-slider-wrapper
+              .with-slider__swiper.swiper
+                ul.swiper-wrapper
+                  each i in listImages
+                    li.swiper-slide
+                      .with-slider__slider-item
+                        +imgLazy(i.imgUrl, i.altUrl)(class="with-slider__slider-item-img")
+
+                      if text
+                        .with-slider__slider-text
+                          | сотрудники компании, которые разрабатывают свои курсы, основываясь на реальном опыте работы. Это специалисты, которые прошли тренинг тренеров для более качественного донесения информации слушателям
+              .with-slider__slider-nav
+                +slider-nav(class="with-slider__slider-nav-btn slider-nav--white-bg")
+                .swiper-scrollbar
+            a.with-slider__link.button.button--lighter(href="#")
+              | Узнать о курсах

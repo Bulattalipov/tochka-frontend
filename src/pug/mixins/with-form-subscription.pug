@@ -1,0 +1,31 @@
+mixin with-form-subscription(block1, block2)
+  if block1
+    section.with-form-subscription(data-non-fixed="\[\"menu\"\]")&attributes(attributes)
+      .site-container
+        .with-form-subscription__wrapper
+          .section-inner
+              .section-inner__left
+              .section-inner__right
+                h2.with-form-subscription__title
+                  | Узнавайте о новых новостях компании первыми
+          +form-block(false, false, true)
+  if block2
+    section.with-form-subscription(data-non-fixed="\[\"menu\"\]")&attributes(attributes)
+      .site-container
+        .with-form-subscription__wrapper
+          .section-inner
+              .section-inner__left
+              .section-inner__right
+                h2.with-form-subscription__title
+                  | Узнавайте о новых новостях компании первыми
+                form.with-form-subscription__box(action="/" data-need-validation="")
+                    .input.js-validation-wrapper.js-validation-wrapper
+                      input.input__element(type="email" placeholder="Телефон" name="telephon" data-parsley-required data-parsley-maxlength='255' data-parsley-email)
+                      span.input__placeholder
+                        | EMAIL
+                    button.button.button--whiteBg(type="submit")
+                      | Подписаться
+                    .with-form-subscription__policy
+                      | Нажимая кнопку вы даёте согласие на обработку ваших персональных данных и соглашаетесь с
+                      a.with-form-subscription__policy-link(href="#")
+                        | политикой конфиденциальности

@@ -1,0 +1,13 @@
+section.logos-simple
+  .site-container-2
+    .section-inner
+      .section-inner__left
+      .section-inner__right
+        h2.logos-simple__title
+          | Наши клиенты
+        .logos-simple__items
+          each i in Array.from(Array(8).keys())
+            .logos-simple__item
+              +imgLazy(`assets/images/main-infinity-slider/${i}.png`, "icon")(class="logos-simple__item-img")
+        a.logos-simple__link.button.button--lighter
+          | о клиентах

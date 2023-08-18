@@ -1,0 +1,17 @@
+.link-list {
+  padding: 14rem 0;
+
+  &__title {
+    margin-bottom: 4rem;
+    font: var(--font-heading-2);
+    text-transform: uppercase;
+  }
+
+  &__inner {
+    .button {
+      display: block;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  }
+}
